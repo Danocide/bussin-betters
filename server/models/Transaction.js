@@ -2,17 +2,17 @@ const { Schema, model } = require('mongoose');
 
 const transactionSchema = new Schema({
 
-    transaction: {
-        type: String,
-        required: true,
-        unique: true,
-        trim: true,
-    },
-
     amount: {
         type: Number,
         required: true,
         minlength: 1,
+    },
+
+    type: {
+        type: String,
+        required: true,
+        unique: true,
+        trim: true,
     },
 
     user: {
@@ -25,7 +25,7 @@ const transactionSchema = new Schema({
         ref: 'Payment',
     },
 
-    bet: {
+    bets: {
         type: Schema.Types.ObjectId,
         ref: 'Bets',
     },

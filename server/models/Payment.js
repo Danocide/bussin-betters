@@ -1,14 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-const paymentSchema = new Schema({
-
-    payment: {
-        type: String,
-        required: true,
-        unique: true,
-        trim: true,
-    },
-
+const paymentSchema = new Schema({   
     amount: {
         type: Number,
         required: true,
@@ -20,7 +12,7 @@ const paymentSchema = new Schema({
         ref: 'User',
     },
 
-    bet: {
+    bets: {
         type: Schema.Types.ObjectId,
         ref: 'Bets',
     },

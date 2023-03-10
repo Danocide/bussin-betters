@@ -1,7 +1,14 @@
 const { Schema, model } = require('mongoose');
 
 const betSchema = new Schema({
-    bet: {
+    bets: {
+        type: String,
+        required: true,
+        unique: true,
+        trim: true,
+    },
+
+    game: {
         type: String,
         required: true,
         unique: true,
@@ -12,6 +19,19 @@ const betSchema = new Schema({
         type: Number,
         required: true,
         minlength: 1,
+    },
+
+    result: {
+        type: String,
+        required: true,
+        unique: true,
+        trim: true,
+    },
+
+    createdAt: {
+        type: Date,
+        default: Date.now,
+        get: (timestamp) => dateFormat(timestamp),
     },
 
     user: {

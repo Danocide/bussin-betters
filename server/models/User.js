@@ -13,6 +13,13 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
+
+  accountBalance: {
+    type: Number,
+    required: true,
+    minlength: 1,
+    },
+
   bets: [
     {
       type: Schema.Types.ObjectId,
@@ -24,6 +31,13 @@ const userSchema = new Schema({
     {
         type: Schema.Types.ObjectId,
         ref: 'Payment',
+    },
+    ],
+
+    transaction: [
+    {
+        type: Schema.Types.ObjectId,
+        ref: 'Transaction',
     },
     ],
 });
