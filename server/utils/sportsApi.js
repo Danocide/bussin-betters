@@ -29,7 +29,7 @@ var keyArr = ['2ca9e05eb2mshaad55f69b7a7e24p152fdajsn1f4c0544ad64',
 	
 	
 	export async function getOddsByRegion(region) {
-		const response = await fetch(API_URL + '/odds?region=' + region, {
+		const response = await fetch(API_URL + '/odds?regions=' + region, {
 			method: 'GET',
 			headers: {
 				'x-rapidapi-host': 'odds.p.rapidapi.com',
@@ -42,7 +42,7 @@ var keyArr = ['2ca9e05eb2mshaad55f69b7a7e24p152fdajsn1f4c0544ad64',
 	
 	
 	export async function getOddsBySportAndRegion(sport, region) {
-		const response = await fetch(API_URL + '/' + sport + 'odds?regions=' + region, {
+		const response = await fetch(API_URL + '/' + sport + '/odds?regions=' + region, {
 			method: 'GET',
 			headers: {
 				'x-rapidapi-host': 'odds.p.rapidapi.com',
@@ -55,7 +55,7 @@ var keyArr = ['2ca9e05eb2mshaad55f69b7a7e24p152fdajsn1f4c0544ad64',
 	
 	
 	export async function getOddsBySportAndRegionAndMarket(sport, region, market) {
-		const response = await fetch(API_URL + '/' + sport + '/' + 'odds?regions=' + region + '&markets=' + market, {
+		const response = await fetch(API_URL + '/' + sport + '/' + '/odds?regions=' + region + '&markets=' + market, {
 			method: 'GET',
 			headers: {
 				'x-rapidapi-host': 'odds.p.rapidapi.com',
@@ -68,7 +68,7 @@ var keyArr = ['2ca9e05eb2mshaad55f69b7a7e24p152fdajsn1f4c0544ad64',
 	
 	
 	export async function getOddsBySportAndRegionAndMarketAndOddType(sport, region, market, oddsFormat) {
-		const response = await fetch(API_URL + '/' + sport + '/' + 'odds?regions=' + region + '&oddsFormat=' + oddsFormat + '&markets=' + market, {
+		const response = await fetch(API_URL + '/' + sport + '/' + '/odds?regions=' + region + '&oddsFormat=' + oddsFormat + '&markets=' + market, {
 			method: 'GET',
 			headers: {
 				'x-rapidapi-host': 'odds.p.rapidapi.com',
@@ -81,7 +81,7 @@ var keyArr = ['2ca9e05eb2mshaad55f69b7a7e24p152fdajsn1f4c0544ad64',
 	
 	
 	export async function getOddsBySportAndRegionAndMarketAndOddTypeAndDate(sport, region, market, oddsFormat, date) {
-		const response = await fetch(API_URL + '/' + sport + '/' + 'odds?regions=' + region + '&oddsFormat=' + oddsFormat + '&markets=' + market + '&dateFormat=' + date, {
+		const response = await fetch(API_URL + '/' + sport + '/' + '/odds?regions=' + region + '&oddsFormat=' + oddsFormat + '&markets=' + market + '&dateFormat=' + date, {
 			method: 'GET',
 			headers: {
 				'x-rapidapi-host': 'odds.p.rapidapi.com',
