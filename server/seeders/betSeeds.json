@@ -1,0 +1,47 @@
+[
+{
+ "game": "American Football",
+ "amount": 200,
+ "result": "Win"
+},
+{
+"game": "Golf",
+"amount": 100,
+"result": "Lose"
+},
+{
+"game": "Tennis",
+"amount": 100,
+"result": "Lose"
+},
+{
+"game": "Basketball",
+"amount": 100,
+"result": "Push"
+},
+{
+"game": "Hockey",
+"amount": 100,
+"result": "Win"
+},
+{
+"game": "Baseball",
+"amount": 100,
+"result": "Win"
+},
+{
+"game": "Soccer",
+"amount": 100,
+"result": "Lose"
+},
+{
+"game": "Volleyball",
+"amount": 100,
+"result": "Win"
+},
+{
+"game": "Cricket",
+"amount": 100,
+"result": "Push"
+}
+]
