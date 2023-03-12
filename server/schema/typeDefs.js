@@ -53,9 +53,16 @@ type Auth {
 
     type Mutation {
     addUser(user: String!, password: String!, accountBalance: Float!): User
+    login(user: String!, password: String!): Auth
+    logout: Auth
+    updateUser(id: ID!, user: String!, password: String!, accountBalance: Float!): User
     addBet(user: ID!, game: String!, amount: Float!): Bet
+    updateBet(id: ID!, user: ID!, game: String!, amount: Float!, result: String!): Bet
+    deleteBet(id: ID!): Bet
     addPayment(user: ID!, amount: Float!): Payment
+    deletePayment(id: ID!): Payment
     addTransaction(user: ID!, amount: Float!, type: String!): Transaction
+    deleteTransaction(id: ID!): Transaction
     deleteUser(id: ID!): User
     }
 

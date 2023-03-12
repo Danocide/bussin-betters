@@ -1,12 +1,6 @@
 const { Schema, model } = require('mongoose');
 
 const betSchema = new Schema({
-    bets: {
-        type: String,
-        required: true,
-        unique: true,
-        trim: true,
-    },
 
     game: {
         type: String,
@@ -23,9 +17,7 @@ const betSchema = new Schema({
 
     result: {
         type: String,
-        required: true,
-        unique: true,
-        trim: true,
+        enum: ['Win', 'Lose', 'Push'],
     },
 
     createdAt: {

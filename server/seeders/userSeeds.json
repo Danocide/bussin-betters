@@ -1,0 +1,43 @@
+[
+    {
+        "username": "test",
+        "password": "test",
+        "accountBalance": 1000
+    },
+    
+    {
+        "username": "test2",
+        "password": "test2",
+        "accountBalance": 2000
+    },
+
+    {
+        "username": "test3",
+        "password": "test3",
+        "accountBalance": 3000
+    },
+
+    {
+        "username": "test4",
+        "password": "test4",
+        "accountBalance": 4000
+    },
+
+    {
+        "username": "test5",
+        "password": "test5",
+        "accountBalance": 5000
+    },
+
+    {
+        "username": "test6",
+        "password": "test6",
+        "accountBalance": 6000
+    },
+
+    {
+        "username": "test7",
+        "password": "test7",
+        "accountBalance": 6969
+    }
+ ]
