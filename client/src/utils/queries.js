@@ -16,6 +16,22 @@ export const QUERY_USER = gql`
   }
 `;
 
+export const QUERY_ME = gql`
+  query me {
+    me {
+      _id
+      username
+      email
+      bets {
+        _id
+        game
+        amount
+        result
+}
+    }
+    }
+`;
+
 export const QUERY_USER_BY_ID = gql`
   query user($id: ID!) {
     user(id: $id) {

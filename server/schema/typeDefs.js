@@ -35,7 +35,7 @@ const typeDefs = gql`
     _id: ID!
     user: User!
     amount: Float!
-    type: String!
+    transType: String!
     bets: [Bets!]!
 }
 
@@ -68,8 +68,8 @@ type Auth {
     deleteBet(id: ID!): Bets
     addPayment(user: ID!, amount: Float!): Payment
     deletePayment(id: ID!): Payment
-    addTransaction(user: ID!, amount: Float!, type: String!): Transaction
-    updateTransaction(id: ID!, user: ID!, amount: Float!, type: String!): Transaction
+    addTransaction(user: ID!, amount: Float!, transType: String!): Transaction
+    updateTransaction(id: ID!, user: ID!, amount: Float!, transType: String!): Transaction
     deleteTransaction(id: ID!): Transaction
     deleteUser(id: ID!): User
     }

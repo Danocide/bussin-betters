@@ -117,11 +117,11 @@ export const DELETE_BET = gql`
 `;
 
 export const ADD_TRANSACTION = gql`
-  mutation addTransaction($amount: Int!, $type: String!) {
-    addTransaction(amount: $amount, type: $type) {
+  mutation addTransaction($amount: Int!, $transType: String!) {
+    addTransaction(amount: $amount, transType: $transType) {
       _id
       amount
-      type
+      transType
       user {
         _id
         user
@@ -133,11 +133,11 @@ export const ADD_TRANSACTION = gql`
 `;
 
 export const UPDATE_TRANSACTION = gql`
-  mutation updateTransaction($id: ID!, $amount: Int!, $type: String!) {
-    updateTransaction(id: $id, amount: $amount, type: $type) {
+  mutation updateTransaction($id: ID!, $amount: Int!, $transType: String!) {
+    updateTransaction(id: $id, amount: $amount, transType: $type) {
       _id
       amount
-      type
+      transType
       user {
         _id
         user
@@ -152,7 +152,7 @@ export const DELETE_TRANSACTION = gql`
     deleteTransaction(id: $id) {
       _id
       amount
-      type
+      transType
       user {
         _id
         user
@@ -164,11 +164,11 @@ export const DELETE_TRANSACTION = gql`
 `;
 
 export const ADD_PAYMENT = gql`
-  mutation addPayment($amount: Int!, $type: String!) {
-    addPayment(amount: $amount, type: $type) {
+  mutation addPayment($amount: Int!) {
+    addPayment(amount: $amount) {
       _id
       amount
-      type
+      
       user {
         _id
         user
@@ -180,11 +180,10 @@ export const ADD_PAYMENT = gql`
 `;
 
 export const UPDATE_PAYMENT = gql`
-    mutation updatePayment($id: ID!, $amount: Int!, $type: String!) {
-        updatePayment(id: $id, amount: $amount, type: $type) {
+    mutation updatePayment($id: ID!, $amount: Int!) {
+        updatePayment(id: $id, amount: $amount) {
             _id
             amount
-            type
             user {
                 _id
                 user
@@ -200,7 +199,6 @@ export const DELETE_PAYMENT = gql`
         deletePayment(id: $id) {
             _id
             amount
-            type
             user {
                 _id
                 user
