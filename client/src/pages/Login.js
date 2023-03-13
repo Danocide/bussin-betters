@@ -40,76 +40,69 @@ const Login = (props) => {
     });
   };
 
-  return (
-    <body>
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar" style="background: var(--bs-accordion-color);color: var(--bs-accordion-active-color);">
-        <div class="container"><i class="icon ion-ios-americanfootball-outline" style="padding-right: 10px;font-size: 35px;"></i><a class="navbar-brand logo" href="#">Bet Stone</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-1" style="margin-left: -1px;margin-right: 0px;padding-right: 0px;">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item" style="margin-right: -10px;"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item" style="margin-right: 0px;padding-right: 0px;"><a class="nav-link" href="pricing.html" style="padding-right: 20px;">Leaderboards</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about-us.html">Profile</a></li>
-                </ul><button class="btn btn-primary" type="button">Log In</button><button class="btn btn-primary" type="button" style="margin-left: 17px;">Join</button>
+      return (
+        <div>
+          <nav className="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar" style={{background: 'var(--bs-accordion-color)', color: 'var(--bs-accordion-active-color)'}}>
+            <div className="container"><i className="icon ion-ios-americanfootball-outline" style={{paddingRight: '10px', fontSize: '35px'}} /><a className="navbar-brand logo" href="#">Bet Stone</a><button data-bs-toggle="collapse" className="navbar-toggler" data-bs-target="#navcol-1"><span className="visually-hidden">Toggle navigation</span><span className="navbar-toggler-icon" /></button>
+              <div className="collapse navbar-collapse" id="navcol-1" style={{marginLeft: '-1px', marginRight: '0px', paddingRight: '0px'}}>
+                <ul className="navbar-nav ms-auto">
+                  <li className="nav-item" style={{marginRight: '-10px'}}><a className="nav-link" href="index.html">Home</a></li>
+                  <li className="nav-item" style={{marginRight: '0px', paddingRight: '0px'}}><a className="nav-link" href="pricing.html" style={{paddingRight: '20px'}}>Leaderboards</a></li>
+                  <li className="nav-item"><a className="nav-link" href="about-us.html">Profile</a></li>
+                </ul><button className="btn btn-primary" type="button">Log In</button><button className="btn btn-primary" type="button" style={{marginLeft: '17px'}}>Join</button>
+              </div>
             </div>
-        </div>
-    </nav>
-    <main class="page login-page" style="background: url(&quot;assets/img/16407114115545.jpg&quot;) top / auto;">
-        <section class="clean-block clean-form dark" style="color: rgba(28,28,28,0.85);background: rgba(17,15,15,0.73);filter: grayscale(0%);backdrop-filter: grayscale(0%) hue-rotate(0deg);-webkit-backdrop-filter: grayscale(0%) hue-rotate(0deg);">
-            <div class="container">
-                <div class="block-heading">
-                    <h2 class="text-info">Log In</h2>
-                    <p style="color: rgb(255,255,255);">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+          </nav>
+          <main className="page login-page" style={{background: 'url("assets/img/16407114115545.jpg") top / auto'}}>
+            <section className="clean-block clean-form dark" style={{color: 'rgba(28,28,28,0.85)', background: 'rgba(17,15,15,0.73)', filter: 'grayscale(0%)', backdropFilter: 'grayscale(0%) hue-rotate(0deg)', WebkitBackdropFilter: 'grayscale(0%) hue-rotate(0deg)'}}>
+              <div className="container">
+                <div className="block-heading">
+                  <h2 className="text-info">Log In</h2>
+                  <p style={{color: 'rgb(255,255,255)'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
                 </div>
-                <form>
-                    <div class="mb-3"><label class="form-label" for="email">Email</label><input class="form-control item" type="email" id="email"></div>
-                    <div class="mb-3"><label class="form-label" for="password">Password</label><input class="form-control" type="password" id="password"></div>
-                    <div class="mb-3">
-                        <div class="form-check"><input class="form-check-input" type="checkbox" id="checkbox"><label class="form-check-label" for="checkbox">Remember me</label></div>
-                    </div><button class="btn btn-primary" type="submit">Log In</button>
+                <div>
+                {data ? (
+              <p>
+                Success! You may now head{' '}
+                <Link to="/">back to the homepage.</Link>
+              </p>
+            ) : (
+                <form onSubmit={handleFormSubmit}>
+                  <div className="mb-3">
+                    <label className="form-label" htmlFor="email">Email</label>
+                    <input 
+                    className="form-control item" 
+                    name="email" 
+                    type="email" 
+                    value={formState.email} 
+                    onChange={handleChange} 
+                    id="email" 
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label className="form-label" htmlFor="password">Password</label>
+                    <input className="form-control" type="password" id="password" />
+                  </div>
+                  <div className="mb-3">
+                    <div className="form-check">
+                        <input className="form-check-input" type="checkbox" id="checkbox" />
+                        <label className="form-check-label" htmlFor="checkbox">Remember me</label>
+                    </div>
+                  </div>
+                        <button className="btn btn-primary" style={{ cursor: 'pointer' }} type="submit">Log In</button>
                 </form>
+                )};
+              {error && (
+                <div className="my-3 p-3 bg-danger text-white">
+                  {error.message}
+                </div>
+              )}
             </div>
-        </section>
-    </main>
-    <footer class="page-footer dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3">
-                    <h5>Get started</h5>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sign up</a></li>
-                        <li><a href="#">Downloads</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h5>About us</h5>
-                    <ul>
-                        <li><a href="#">Company Information</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Reviews</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h5>Support</h5>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Help desk</a></li>
-                        <li><a href="#">Forums</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h5>Legal</h5>
-                    <ul>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
             </div>
+            </section>
+          </main>
         </div>
-        <div class="footer-copyright">
-            <p>© 2023 Copyright Text</p>
-        </div>
-    </footer>
-    </body>
-  )
+      );
+    };
+
+  export default Login;
