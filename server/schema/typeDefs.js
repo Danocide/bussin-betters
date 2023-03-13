@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server');
+const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
   type User {
@@ -6,7 +6,7 @@ const typeDefs = gql`
     user: String!
     password: String!
     accountBalance: Float!
-    bets: [Bet!]!
+    bets: [Bets!]!
     transactions: [Transaction!]!
     payments: [Payment!]!
   }
@@ -26,7 +26,7 @@ const typeDefs = gql`
     _id: ID!
     user: User!
     amount: Float!
-    bets: [Bet!]!
+    bets: [Bets!]!
     transactions: [Transaction!]!
 }
 
@@ -35,7 +35,7 @@ const typeDefs = gql`
     user: User!
     amount: Float!
     type: String!
-    bets: [Bet!]!
+    bets: [Bets!]!
 }
 
 type Auth {
@@ -46,7 +46,7 @@ type Auth {
     type Query {
     users: [User!]!
     user(id: ID!): User
-    bets: [Bet!]!
+    bets: [Bets!]!
     transactions: [Transaction!]!
     payments: [Payment!]!
   }
@@ -56,9 +56,9 @@ type Auth {
     login(user: String!, password: String!): Auth
     logout: Auth
     updateUser(id: ID!, user: String!, password: String!, accountBalance: Float!): User
-    addBet(user: ID!, game: String!, amount: Float!): Bet
-    updateBet(id: ID!, user: ID!, game: String!, amount: Float!, result: String!): Bet
-    deleteBet(id: ID!): Bet
+    addBet(user: ID!, game: String!, amount: Float!): Bets
+    updateBet(id: ID!, user: ID!, game: String!, amount: Float!, result: String!): Bets
+    deleteBet(id: ID!): Bets
     addPayment(user: ID!, amount: Float!): Payment
     deletePayment(id: ID!): Payment
     addTransaction(user: ID!, amount: Float!, type: String!): Transaction
