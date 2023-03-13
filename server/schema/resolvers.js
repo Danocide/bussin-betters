@@ -4,10 +4,45 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
     Query: {
-        users: async () => {
+        user: async () => {
             return User.find();
-        }
+        },
+        user: async (parent, { id }) => {
+            return User.findById(id);
+          },
+          bets: async () => {
+            return Bets.find();
+          },
+          bets: async (parent, { id }) => {
+            return Bets.findById(id);
+        },
+          bets: async (parent, { user }) => {
+            const params = user ? { user } : {};
+            return Bets.find(params).sort({ createdAt: -1 });
+          },
+          transaction: async () => {
+            return Transaction.find();
+          },
+          transaction: async(parent, { id }) => {
+            return Transaction.findById(id);
+          },
+            transaction: async (parent, { user }) => {  
+            const params = user ? { user } : {};
+            return Transaction.find(params).sort({ createdAt: -1 });
+            },
+
+          payments: async () => {
+            return Payment.find();
+          },
+            payments: async(parent, { id }) => {
+                return Payment.findById(id);
+        },
+            payments: async (parent, { user }) => {
+            const params = user ? { user } : {};  
+            return Payment.find(params).sort({ createdAt: -1 });
+            },
     },
+
     Mutation: {
         addUser: async (parent, args) => {
             const user = await User.create(args);

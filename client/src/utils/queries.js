@@ -1,41 +1,172 @@
-import decode from 'jwt-decode';
+import { gql } from '@apollo/client';
 
-class AuthService {
-  getProfile() {
-    return decode(this.getToken());
-  }
-
-  loggedIn() {
-    const token = this.getToken();
-    // If there is a token and it's not expired, return `true`
-    return token && !this.isTokenExpired(token) ? true : false;
-  }
-
-  isTokenExpired(token) {
-    // Decode the token to get its expiration time that was set by the server
-    const decoded = decode(token);
-    // If the expiration time is less than the current time (in seconds), the token is expired and we return `true`
-    if (decoded.exp < Date.now() / 1000) {
-      localStorage.removeItem('id_token');
-      return true;
+export const QUERY_USER = gql`
+  query {
+    user {
+      _id
+      username
+      email
+      bets {
+        _id
+        game
+        amount
+        result
+      }
     }
-    // If token hasn't passed its expiration time, return `false`
-    return false;
   }
+`;
 
-  getToken() {
-    return localStorage.getItem('id_token');
+export const QUERY_USER_BY_ID = gql`
+  query user($id: ID!) {
+    user(id: $id) {
+      _id
+      username
+      email
+      bets {
+        _id
+        game
+        amount
+        result
+      }
+    }
   }
+`;
 
-  login(idToken) {
-    localStorage.setItem('id_token', idToken);
-    window.location.assign('/');
+export const QUERY_BETS = gql`
+  query {
+    bets {
+      _id
+      game
+      amount
+      result
+      user {
+        _id
+        username
+        email
+      }
+    }
   }
+`;
 
-  logout() {
-    localStorage.removeItem('id_token');
-    window.location.reload();
+export const QUERY_BET_BY_ID = gql`
+  query bet($id: ID!) {
+    bet(id: $id) {
+      _id
+      game
+      amount
+      result
+      user {
+        _id
+        username
+        email
+      }
+    }
   }
-}
+`;
 
-export default new AuthService();
+export const QUERY_BET_BY_USER = gql`
+  query bet($user: ID!) {
+    bet(user: $user) {
+      _id
+      game
+      amount
+      result
+      user {
+        _id
+        username
+        email
+      }
+    }
+  }
+`;
+
+export const QUERY_TRANSACTIONS = gql`
+  query {
+    transactions {
+      _id
+      amount
+      type
+      user {
+        _id
+        username
+        email
+      }
+    }
+  }
+`;
+export const QUERY_TRANS_BY_ID = gql`
+  query transaction($id: ID!) {
+    transaction(id: $id) {
+      _id
+      amount
+      type
+      user {
+        _id
+        username
+        email
+      }
+    }
+  }
+`;
+
+export const QUERY_TRANS_BY_USER = gql`
+  query transaction($user: ID!) {
+    transaction(user: $user) {
+      _id
+      amount
+      type
+      user {
+        _id
+        username
+        email
+      }
+    }
+  }
+`;
+
+
+export const QUERY_PAYMENTS = gql`
+  query {
+    payments {
+      _id
+      amount
+      user {
+        _id
+        username
+        email
+      }
+    }
+  }
+`;
+
+
+
+export const QUERY_PAY_BY_ID = gql`
+  query payment($id: ID!) {
+    payment(id: $id) {
+      _id
+      amount
+      user {
+        _id
+        username
+        email
+      }
+    }
+  }
+`;
+
+export const QUERY_PAY_BY_USER = gql`
+  query payment($user: ID!) {
+    payment(user: $user) {
+      _id
+      amount
+      user {
+        _id
+        username
+        email
+      }
+    }
+  }
+`;
+
+
