@@ -4,44 +4,43 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
     Query: {
-        user: async () => {
-            return User.find();
+        getUsers: async () => {
+          return User.find();
         },
-        user: async (parent, { id }) => {
-            return User.findById(id);
-          },
-          bets: async () => {
-            return Bets.find();
-          },
-          bets: async (parent, { id }) => {
-            return Bets.findById(id);
+        getUserById: async (parent, { id }) => {
+          return User.findById(id);
         },
-          bets: async (parent, { user }) => {
-            const params = user ? { user } : {};
-            return Bets.find(params).sort({ createdAt: -1 });
-          },
-          transaction: async () => {
-            return Transaction.find();
-          },
-          transaction: async(parent, { id }) => {
-            return Transaction.findById(id);
-          },
-            transaction: async (parent, { user }) => {  
-            const params = user ? { user } : {};
-            return Transaction.find(params).sort({ createdAt: -1 });
-            },
-
-          payments: async () => {
-            return Payment.find();
-          },
-            payments: async(parent, { id }) => {
-                return Payment.findById(id);
+        getBets: async () => {
+          return Bets.find();
         },
-            payments: async (parent, { user }) => {
-            const params = user ? { user } : {};  
-            return Payment.find(params).sort({ createdAt: -1 });
-            },
-    },
+        getBetsById: async (parent, { id }) => {
+          return Bets.findById(id);
+        },
+        getBetsByUser: async (parent, { user }) => {
+          const params = user ? { user } : {};
+          return Bets.find(params).sort({ createdAt: -1 });
+        },
+        getTransactions: async () => {
+          return Transaction.find();
+        },
+        getTransactionById: async (parent, { id }) => {
+          return Transaction.findById(id);
+        },
+        getTransactionsByUser: async (parent, { user }) => {
+          const params = user ? { user } : {};
+          return Transaction.find(params).sort({ createdAt: -1 });
+        },
+        getPayments: async () => {
+          return Payment.find();
+        },
+        getPaymentById: async (parent, { id }) => {
+          return Payment.findById(id);
+        },
+        getPaymentsByUser: async (parent, { user }) => {
+          const params = user ? { user } : {};
+          return Payment.find(params).sort({ createdAt: -1 });
+        },
+      },
 
     Mutation: {
         addUser: async (parent, args) => {
