@@ -42,17 +42,6 @@ const Login = (props) => {
 
       return (
         <div>
-          <nav className="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar" style={{background: 'var(--bs-accordion-color)', color: 'var(--bs-accordion-active-color)'}}>
-            <div className="container"><i className="icon ion-ios-americanfootball-outline" style={{paddingRight: '10px', fontSize: '35px'}} /><a className="navbar-brand logo" href="#">Bet Stone</a><button data-bs-toggle="collapse" className="navbar-toggler" data-bs-target="#navcol-1"><span className="visually-hidden">Toggle navigation</span><span className="navbar-toggler-icon" /></button>
-              <div className="collapse navbar-collapse" id="navcol-1" style={{marginLeft: '-1px', marginRight: '0px', paddingRight: '0px'}}>
-                <ul className="navbar-nav ms-auto">
-                  <li className="nav-item" style={{marginRight: '-10px'}}><a className="nav-link" href="index.html">Home</a></li>
-                  <li className="nav-item" style={{marginRight: '0px', paddingRight: '0px'}}><a className="nav-link" href="pricing.html" style={{paddingRight: '20px'}}>Leaderboards</a></li>
-                  <li className="nav-item"><a className="nav-link" href="about-us.html">Profile</a></li>
-                </ul><button className="btn btn-primary" type="button">Log In</button><button className="btn btn-primary" type="button" style={{marginLeft: '17px'}}>Join</button>
-              </div>
-            </div>
-          </nav>
           <main className="page login-page" style={{background: 'url("assets/img/16407114115545.jpg") top / auto'}}>
             <section className="clean-block clean-form dark" style={{color: 'rgba(28,28,28,0.85)', background: 'rgba(17,15,15,0.73)', filter: 'grayscale(0%)', backdropFilter: 'grayscale(0%) hue-rotate(0deg)', WebkitBackdropFilter: 'grayscale(0%) hue-rotate(0deg)'}}>
               <div className="container">
