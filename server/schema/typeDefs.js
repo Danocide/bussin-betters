@@ -46,16 +46,16 @@ type Auth {
 
     type Query {
     user: [User!]!
-    user(id: ID!): User
+    userId(id: ID!): User
     bets: [Bets!]!
-    bets(id: ID!): Bets
-    bets(user: ID!): [Bets!]!
+    betsById(id: ID!): Bets
+    betsByUser(user: ID!): [Bets!]!
     transaction: [Transaction!]!
-    transaction(id: ID!): Transaction
-    transaction(user: ID!): [Transaction!]!
+    transactionById(id: ID!): Transaction
+    transactionByUser(user: ID!): [Transaction!]!
     payment: [Payment!]!
-    payment(id: ID!): Payment
-    payment(user:ID!): [Payment!]!
+    paymentbyId(id: ID!): Payment
+    paymentbyUser(user:ID!): [Payment!]!
   }
 
     type Mutation {

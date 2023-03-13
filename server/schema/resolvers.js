@@ -4,40 +4,40 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
     Query: {
-        getUsers: async () => {
+        user: async (parent, { id }) => {
+          if (id) {
+            return User.findById(id);
+          }
           return User.find();
         },
-        getUserById: async (parent, { id }) => {
-          return User.findById(id);
-        },
-        getBets: async () => {
-          return Bets.find();
-        },
-        getBetsById: async (parent, { id }) => {
-          return Bets.findById(id);
-        },
-        getBetsByUser: async (parent, { user }) => {
-          const params = user ? { user } : {};
+        bets: async (parent, { id, user }) => {
+          const params = {};
+          if (id) {
+            params._id = id;
+          }
+          if (user) {
+            params.user = user;
+          }
           return Bets.find(params).sort({ createdAt: -1 });
         },
-        getTransactions: async () => {
-          return Transaction.find();
-        },
-        getTransactionById: async (parent, { id }) => {
-          return Transaction.findById(id);
-        },
-        getTransactionsByUser: async (parent, { user }) => {
-          const params = user ? { user } : {};
+        transaction: async (parent, { id, user }) => {
+          const params = {};
+          if (id) {
+            params._id = id;
+          }
+          if (user) {
+            params.user = user;
+          }
           return Transaction.find(params).sort({ createdAt: -1 });
         },
-        getPayments: async () => {
-          return Payment.find();
-        },
-        getPaymentById: async (parent, { id }) => {
-          return Payment.findById(id);
-        },
-        getPaymentsByUser: async (parent, { user }) => {
-          const params = user ? { user } : {};
+        payment: async (parent, { id, user }) => {
+          const params = {};
+          if (id) {
+            params._id = id;
+          }
+          if (user) {
+            params.user = user;
+          }
           return Payment.find(params).sort({ createdAt: -1 });
         },
       },
