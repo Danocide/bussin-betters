@@ -1,22 +1,36 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import Home from './pages/Home';
-import Leaderboards from './pages/Leaderboards';
-import Profile from './pages/Profile';
-import NotFound from './pages/NotFound';
+// import Profile from './pages/Profile';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Login from './pages/Login';
+// import Signup from './pages/Signup';
+
+const client = new ApolloClient({
+    uri: '/graphql',
+    cache: new InMemoryCache(),
+});
 
 function App() {
   return (
+    <ApolloProvider client={client}>
     <>
       <Navbar />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/leaderboards" component={Leaderboards} />
-        <Route path="/profile" component={Profile} />
-        <Route component={NotFound} />
-      </Switch>
+      <Routes>
+      <Route
+          exact
+          path="/"
+          element={<Home />}
+        />
+        {/* <Route path="/profile" component={Profile} /> */}
+        <Route path="/login" element={<Login />} />
+        {/* <Route path="/signup" component={Signup} /> */}
+      </Routes>
+      <Footer />
     </>
+    </ApolloProvider>
   );
 }
 
