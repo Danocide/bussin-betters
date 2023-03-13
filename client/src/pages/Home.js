@@ -10,7 +10,7 @@ export default class App extends React.Component {
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item" style={{marginRight: '-10px'}}><a className="nav-link active" href="index.html">Home</a></li>
                 <li className="nav-item" style={{marginRight: '0px', paddingRight: '0px'}}><a className="nav-link" href="pricing.html" style={{paddingRight: '20px'}}>Leaderboards</a></li>
-                <li className="nav-item"><a className="nav-link" href="about-us.html">Profile</a></li>
+                <li className="nav-item"><a className="nav-link" href="/profile">Profile</a></li>
               </ul><button className="btn btn-primary" type="button">Log In</button><button className="btn btn-primary" type="button" style={{marginLeft: '17px'}}>Join</button>
             </div>
           </div>
