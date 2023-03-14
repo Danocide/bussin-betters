@@ -1,5 +1,9 @@
 import React from 'react';
-import GetScores from '../components/PostScores';
+import GetMLBScores from '../components/SportsScores/MLBScores';
+import GetNBAScores from '../components/SportsScores/NBAScores';
+import GetNFLScores from '../components/SportsScores/NFLScores';
+import GetMLSScores from '../components/SportsScores/MLSScores';
+
 
 
 export default class App extends React.Component {
@@ -33,6 +37,7 @@ export default class App extends React.Component {
                   <h2 className="accordion-header" role="tab"><button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-1" aria-expanded="false" aria-controls="accordion-1 .item-1">NFL</button></h2>
                   <div className="accordion-collapse collapse item-1" role="tabpanel" data-bs-parent="#accordion-1" style={{transform: 'perspective(0px)'}}>
                     <div className="accordion-body d-flex flex-column">
+                      {/* <GetNFLScores/> */}
                       <div className="row" />
                       <div className="row" />
                       <div className="row" />
@@ -44,6 +49,7 @@ export default class App extends React.Component {
                   <h2 className="accordion-header" role="tab"><button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-2" aria-expanded="false" aria-controls="accordion-1 .item-2">NBA</button></h2>
                   <div className="accordion-collapse collapse item-2" role="tabpanel" data-bs-parent="#accordion-1">
                     <div className="accordion-body">
+                      <GetNBAScores/>
                       <div className="row" />
                       <div className="row" />
                       <div className="row" />
@@ -55,7 +61,7 @@ export default class App extends React.Component {
                   <h2 className="accordion-header" role="tab"><button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-3" aria-expanded="false" aria-controls="accordion-1 .item-3">MLB</button></h2>
                   <div className="accordion-collapse collapse item-3" role="tabpanel" data-bs-parent="#accordion-1">
                     <div className="accordion-body">
-                      <GetScores/>
+                      <GetMLBScores/>
                       <div className="row" />
                       <div className="row" />
                       <div className="row" />
@@ -64,9 +70,10 @@ export default class App extends React.Component {
                   </div>
                 </div>
                 <div className="accordion-item">
-                  <h2 className="accordion-header" role="tab"><button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-4" aria-expanded="false" aria-controls="accordion-1 .item-4">SOCCER</button></h2>
+                  <h2 className="accordion-header" role="tab"><button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-4" aria-expanded="false" aria-controls="accordion-1 .item-4">MLS</button></h2>
                   <div className="accordion-collapse collapse item-4" role="tabpanel" data-bs-parent="#accordion-1">
                     <div className="accordion-body">
+                      <GetMLSScores/>
                       <div className="row" />
                       <div className="row" />
                       <div className="row" />
