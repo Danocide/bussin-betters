@@ -19,7 +19,7 @@ useEffect(() => {
 
 return (
   <section>
-    <CreateCards results = {results}/>
+    {/* <CreateCards results = {results}/> */}
   </section>
 );
 }
