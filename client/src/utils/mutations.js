@@ -30,7 +30,7 @@ export const ADD_USER = gql`
       token
       user {
         _id
-        user
+        username
         email
         accountBalance
       }
@@ -39,10 +39,10 @@ export const ADD_USER = gql`
 `;
 
 export const UPDATE_USER = gql`
-  mutation updateUser($user: String!, $email: String!, $password: String!, $accountBalance: Int!) {
-    updateUser(user: $user, email: $email, password: $password, accountBalance: $accountBalance) {
+  mutation updateUser($username: String!, $email: String!, $password: String!, $accountBalance: Int!) {
+    updateUser(username: $username, email: $email, password: $password, accountBalance: $accountBalance) {
       _id
-      user
+      username
       email
       accountBalance
       }
@@ -53,7 +53,7 @@ export const DELETE_USER = gql`
   mutation deleteUser($id: ID!) {
     deleteUser(id: $id) {
       _id
-      user
+      username
       email
       accountBalance
     }
@@ -61,7 +61,7 @@ export const DELETE_USER = gql`
 `;
 
 export const ADD_BET = gql`
-  mutation addBet($game: String!, $amount: Int!, $result: String!) {
+  mutation addBet($game: String!, $amount: Float!, $result: String!) {
     addBet(game: $game, amount: $amount, result: $result) {
       _id
       game
@@ -69,7 +69,7 @@ export const ADD_BET = gql`
       result
       user {
         _id
-        user
+        username
         email
         accountBalance
       }
@@ -91,7 +91,7 @@ export const UPDATE_BET = gql`
       result
       user {
         _id
-        user
+        username
         email
         accountBalance
       }
@@ -108,7 +108,7 @@ export const DELETE_BET = gql`
       result
       user {
         _id
-        user
+        username
         email
         accountBalance
       }
@@ -124,7 +124,7 @@ export const ADD_TRANSACTION = gql`
       transType
       user {
         _id
-        user
+        username
         email
         accountBalance
       }
@@ -134,13 +134,13 @@ export const ADD_TRANSACTION = gql`
 
 export const UPDATE_TRANSACTION = gql`
   mutation updateTransaction($id: ID!, $amount: Int!, $transType: String!) {
-    updateTransaction(id: $id, amount: $amount, transType: $type) {
+    updateTransaction(id: $id, amount: $amount, transType: $transType) {
       _id
       amount
       transType
       user {
         _id
-        user
+        username
         email
         accountBalance
       }
@@ -155,7 +155,7 @@ export const DELETE_TRANSACTION = gql`
       transType
       user {
         _id
-        user
+        username
         email
         accountBalance
       }
@@ -171,7 +171,7 @@ export const ADD_PAYMENT = gql`
       
       user {
         _id
-        user
+        username
         email
         accountBalance
       }
@@ -186,7 +186,7 @@ export const UPDATE_PAYMENT = gql`
             amount
             user {
                 _id
-                user
+                username
                 email
                 accountBalance
             }
@@ -201,7 +201,7 @@ export const DELETE_PAYMENT = gql`
             amount
             user {
                 _id
-                user
+                username
                 email
                 accountBalance
             }

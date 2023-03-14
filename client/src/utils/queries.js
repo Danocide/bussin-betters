@@ -6,19 +6,27 @@ export const QUERY_USER = gql`
       _id
       username
       email
-      bets {
-        _id
-        game
-        amount
-        result
       }
+      transactions {
+        _id
+        amount
+        transType
+        createdAt
+        payment {
+          _id
+          amount
+        }
+        bets {
+          _id
+          amount
+        }
     }
   }
 `;
 
 export const QUERY_ME = gql`
-  query me {
-    me {
+  query me($username: String) {
+    me(username: $username) {
       _id
       username
       email
@@ -27,9 +35,19 @@ export const QUERY_ME = gql`
         game
         amount
         result
-}
+      }
+      transactions {
+        _id
+        amount
+        transType
+        createdAt
+      }
+      payments {
+        _id
+        amount
+      }
     }
-    }
+  }
 `;
 
 export const QUERY_USER_BY_ID = gql`

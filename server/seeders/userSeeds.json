@@ -1,48 +1,48 @@
 [
     {
-        "user": "test",
+        "username": "test",
         "email": "test@test-email.com",
         "password": "testing",
         "accountBalance": 1000
     },
     
     {
-        "user": "test2",
+        "username": "test2",
         "email": "test2@test-email.com",
         "password": "testing2",
         "accountBalance": 2000
     },
 
     {
-        "user": "test3",
+        "username": "test3",
         "email": "test3@test-email.com",
         "password": "testing3",
         "accountBalance": 3000
     },
 
     {
-        "user": "test4",
+        "username": "test4",
         "email": "test4@test-email.com",
         "password": "testing4",
         "accountBalance": 4000
     },
 
     {
-        "user": "test5",
+        "username": "test5",
         "email": "test5@test-email.com",
         "password": "testing5",
         "accountBalance": 5000
     },
 
     {
-        "user": "test6",
+        "username": "test6",
         "email": "test6@test-email.com",
         "password": "testing6",
         "accountBalance": 6000
     },
 
     {
-        "user": "test7",
+        "username": "test7",
         "email": "test7@test-email.com",
         "password": "testing7",
         "accountBalance": 6969
