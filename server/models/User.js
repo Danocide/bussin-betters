@@ -24,8 +24,8 @@ const userSchema = new Schema({
 
   accountBalance: {
     type: Number,
-    required: true,
-    minlength: 1,
+    // minlength: 1,
+    default: 100,
     },
 
   bets: [
