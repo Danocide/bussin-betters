@@ -1,4 +1,6 @@
 import React from 'react';
+import GetScores from '../components/PostScores';
+
 
 export default class App extends React.Component {
     render(){
@@ -53,6 +55,7 @@ export default class App extends React.Component {
                   <h2 className="accordion-header" role="tab"><button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-3" aria-expanded="false" aria-controls="accordion-1 .item-3">MLB</button></h2>
                   <div className="accordion-collapse collapse item-3" role="tabpanel" data-bs-parent="#accordion-1">
                     <div className="accordion-body">
+                      <GetScores/>
                       <div className="row" />
                       <div className="row" />
                       <div className="row" />
