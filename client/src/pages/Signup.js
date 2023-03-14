@@ -43,7 +43,7 @@ const Signup = () => {
 
   return (
         <main className="page registration-page" style={{background: 'url("assets/img/16407114115545.jpg") top'}}>
-          <section className="clean-block clean-form dark" style={{background: 'rgba(16,16,16,0.83)'}}>
+          <section className="clean-block clean-form dark" style={{background: 'rgba(16,16,16,0.83)', height: '1030px'}}>
             <div className="container">
               <div className="block-heading">
                 <h2 className="text-info">Registration</h2>

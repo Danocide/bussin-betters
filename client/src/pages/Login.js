@@ -41,24 +41,12 @@ const Login = (props) => {
 
       return (
         <div>
-          <main
-            className="page login-page"
-            style={{
-              background: 'url("assets/img/16407114115545.jpg") top / auto',
-            }}
-          >
-            <section
-              className="clean-block clean-form dark"
-              style={{
-                color: "rgba(28,28,28,0.85)",
-                background: "rgba(17,15,15,0.73)",
-                filter: "grayscale(0%)",
-                backdropFilter: "grayscale(0%) hue-rotate(0deg)",
-                WebkitBackdropFilter: "grayscale(0%) hue-rotate(0deg)",
-              }}
-            >
+
+          <main className="page login-page" style={{background: 'url("assets/img/16407114115545.jpg") top / auto'}}>
+            <section className="clean-block clean-form dark" style={{color: 'rgba(28,28,28,0.85)', background: `rgba(16,16,16,0.83)`, height: '1110px'}}>
+
               <div className="container">
-                <div className="block-heading">
+                <div className="block-heading" style={{padding: `200px 200px 0px 200px`}}>
                   <h2 className="text-info">Log In</h2>
                   <p style={{ color: "rgb(255,255,255)" }}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
