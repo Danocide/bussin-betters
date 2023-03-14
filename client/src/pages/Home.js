@@ -13,8 +13,8 @@ export default class App extends React.Component {
         <main className="page landing-page">
           <section className="clean-block clean-hero" style={{color: 'rgba(28,28,28,0.85)', background: 'url("assets/img/12nfl-sked-spencer-videoSixteenByNine3000.jpg") center / cover, url("assets/img/13nfl-matchups-kc-videoSixteenByNine3000.jpg"), url("assets/img/16407114115545.jpg")', height: '1100px'}}>
             <div className="text">
-              <h2>Lorem ipsum dolor sit amet.</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p><button className="btn btn-outline-light btn-lg" type="button" data-bs-target="SportsNav">BET NOW</button>
+              <h2>Welcome to Bhet Stone</h2>
+              <p>This is your wife's favorite sports betting website. No credit cards. Just bragging rights</p><button className="btn btn-outline-light btn-lg" type="button" data-bs-target="SportsNav">BET NOW</button>
             </div>
           </section>
           <section className="clean-block clean-info dark">
@@ -38,39 +38,6 @@ export default class App extends React.Component {
                   <div className="accordion-collapse collapse item-1" role="tabpanel" data-bs-parent="#accordion-1" style={{transform: 'perspective(0px)'}}>
                     <div className="accordion-body d-flex flex-column">
 {/* <GetNFLScores/> */}
-        <div className="row">
-        <div className="col-xxl-12" style={{marginLeft: '-10px'}}>
-          <div className="card d-flex flex-row align-items-center" style={{height: '57px', width: '1352px'}}>
-            <div className="card-body" style={{fontSize: '16px'}}>
-              <p>Home_Team</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{fontSize: '16px', marginLeft: '-84px'}}>
-              <p>-</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{marginLeft: '-79px'}}>
-              <p>Away_Team</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{marginLeft: '20px'}}>
-              <p>BetInfo</p>
-            </div>
-            <div className="card-body d-flex flex-row">
-              <p>BetInfo</p>
-            </div>
-            <div className="card-body d-flex flex-row">
-              <p>BetInfo</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{fontSize: '16px'}}>
-              <p>23</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{fontSize: '16px', marginLeft: '0px'}}>
-              <p>-</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{fontSize: '16px'}}>
-              <p>21</p>
-            </div><button className="btn btn-primary" type="button" style={{height: '45px'}}>Bet Now!</button>
-          </div>
-        </div>
-      </div>
                     </div>
                   </div>
                 </div>
