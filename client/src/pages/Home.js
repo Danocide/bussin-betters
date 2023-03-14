@@ -19,7 +19,7 @@ export default class App extends React.Component {
                 <div className="collapse navbar-collapse justify-content-center" id="navcol-2" style={{paddingLeft: '0px', marginLeft: '0px', color: 'rgb(255,255,255)'}}>
                   <ul className="navbar-nav">
                     <li className="nav-item"><a className="nav-link active" href="#" style={{color: 'rgba(255,255,255,0.9)'}}>ALL SPORTS</a></li>
-                    <li className="nav-item"><a className="nav-link active" href="#" style={{color: 'rgba(255,255,255,0.9)'}}>NFL</a></li>
+                    <li className="nav-item"><a className="nav-link" href="#" style={{color: 'rgba(255,255,255,0.9)'}}>NFL</a></li>
                     <li className="nav-item"><a className="nav-link" href="#" style={{color: 'rgba(255,255,255,0.55)'}}>NBA</a></li>
                     <li className="nav-item"><a className="nav-link" href="#" style={{color: 'rgba(255,255,255,0.55)'}}>MLB</a></li>
                     <li className="nav-item"><a className="nav-link" href="#" style={{color: 'rgba(255,255,255,0.55)'}}>SOCCER</a></li>
@@ -33,10 +33,39 @@ export default class App extends React.Component {
                   <h2 className="accordion-header" role="tab"><button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-1" aria-expanded="false" aria-controls="accordion-1 .item-1">NFL</button></h2>
                   <div className="accordion-collapse collapse item-1" role="tabpanel" data-bs-parent="#accordion-1" style={{transform: 'perspective(0px)'}}>
                     <div className="accordion-body d-flex flex-column">
-                      <div className="row" />
-                      <div className="row" />
-                      <div className="row" />
-                      <div className="row" />
+                    <div className="row">
+        <div className="col-xxl-12" style={{marginLeft: '-10px'}}>
+          <div className="card d-flex flex-row align-items-center" style={{height: '57px', width: '1352px'}}>
+            <div className="card-body" style={{fontSize: '16px'}}>
+              <p>Home_Team</p>
+            </div>
+            <div className="card-body d-flex flex-row" style={{fontSize: '16px', marginLeft: '-84px'}}>
+              <p>-</p>
+            </div>
+            <div className="card-body d-flex flex-row" style={{marginLeft: '-79px'}}>
+              <p>Away_Team</p>
+            </div>
+            <div className="card-body d-flex flex-row" style={{marginLeft: '20px'}}>
+              <p>BetInfo</p>
+            </div>
+            <div className="card-body d-flex flex-row">
+              <p>BetInfo</p>
+            </div>
+            <div className="card-body d-flex flex-row">
+              <p>BetInfo</p>
+            </div>
+            <div className="card-body d-flex flex-row" style={{fontSize: '16px'}}>
+              <p>23</p>
+            </div>
+            <div className="card-body d-flex flex-row" style={{fontSize: '16px', marginLeft: '0px'}}>
+              <p>-</p>
+            </div>
+            <div className="card-body d-flex flex-row" style={{fontSize: '16px'}}>
+              <p>21</p>
+            </div><button className="btn btn-primary" type="button" style={{height: '45px'}}>Bet Now!</button>
+          </div>
+        </div>
+      </div>
                     </div>
                   </div>
                 </div>
@@ -85,7 +114,7 @@ export default class App extends React.Component {
                 <div className="card-body" style={{height: '550px'}}>
                   <h4 className="card-title" style={{textAlign: 'center'}}>Weekly</h4>
                   <div className="row d-flex flex-column" style={{marginBottom: '9px', borderRadius: '5px', borderBottom: '3px solid rgb(130,130,130)'}}>
-                    <div className="col d-flex flex-row align-items-center align-content-center align-self-center" style={{marginBottom: '0px'}}>
+                    <button className="col d-flex flex-row align-items-center align-content-center align-self-center" href="#" style={{marginBottom: '0px', border: 'none'}}>
                       <picture><img className="rounded-circle" src="assets/img/scenery/image6.jpg" style={{width: '65px', height: '65px'}} /></picture>
                       <div style={{marginLeft: '10px'}}>
                         <p style={{marginBottom: '0px', fontSize: '20px'}}>Username</p>
@@ -101,7 +130,45 @@ export default class App extends React.Component {
                           <p>21</p>
                         </div>
                       </div>
-                    </div>
+                    </button>
+                  </div>
+                  <div className="row d-flex flex-column" style={{marginBottom: '9px', borderRadius: '5px', borderBottom: '3px solid rgb(130,130,130)'}}>
+                    <button className="col d-flex flex-row align-items-center align-content-center align-self-center" href="#" style={{marginBottom: '0px', border: 'none'}}>
+                      <picture><img className="rounded-circle" src="assets/img/scenery/image6.jpg" style={{width: '65px', height: '65px'}} /></picture>
+                      <div style={{marginLeft: '10px'}}>
+                        <p style={{marginBottom: '0px', fontSize: '20px'}}>Username</p>
+                        <p className="fw-bold" style={{marginBottom: '0px', marginRight: '0px', fontSize: '10px', marginLeft: '2px'}}>324.32</p>
+                      </div>
+                      <div className="d-flex flex-row">
+                        <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '35px', marginTop: '25px'}}>
+                          <p className="fw-semibold" style={{marginBottom: '0px', color: 'var(--bs-gray-600)', fontSize: '12px'}}>Wins:</p>
+                          <p>36</p>
+                        </div>
+                        <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '30px', marginTop: '25px'}}>
+                          <p className="fw-semibold" style={{marginBottom: '0px', fontSize: '12px', color: 'var(--bs-gray-600)'}}>Losses:</p>
+                          <p>21</p>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                  <div className="row d-flex flex-column" style={{marginBottom: '9px', borderRadius: '5px', borderBottom: '3px solid rgb(130,130,130)'}}>
+                    <button className="col d-flex flex-row align-items-center align-content-center align-self-center" href="#" style={{marginBottom: '0px', border: 'none'}}>
+                      <picture><img className="rounded-circle" src="assets/img/scenery/image6.jpg" style={{width: '65px', height: '65px'}} /></picture>
+                      <div style={{marginLeft: '10px'}}>
+                        <p style={{marginBottom: '0px', fontSize: '20px'}}>Username</p>
+                        <p className="fw-bold" style={{marginBottom: '0px', marginRight: '0px', fontSize: '10px', marginLeft: '2px'}}>324.32</p>
+                      </div>
+                      <div className="d-flex flex-row">
+                        <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '35px', marginTop: '25px'}}>
+                          <p className="fw-semibold" style={{marginBottom: '0px', color: 'var(--bs-gray-600)', fontSize: '12px'}}>Wins:</p>
+                          <p>36</p>
+                        </div>
+                        <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '30px', marginTop: '25px'}}>
+                          <p className="fw-semibold" style={{marginBottom: '0px', fontSize: '12px', color: 'var(--bs-gray-600)'}}>Losses:</p>
+                          <p>21</p>
+                        </div>
+                      </div>
+                    </button>
                   </div>
                   <div className="row d-flex flex-column" style={{marginBottom: '9px', borderRadius: '5px', borderBottom: '3px solid rgb(130,130,130)'}}>
                     <div className="col d-flex flex-row align-items-center align-content-center align-self-center" style={{marginBottom: '0px'}}>
