@@ -76,6 +76,154 @@ export default class App extends React.Component {
                 </div>
               </div>
             </div>
+        <div>
+        <h1 style={{textAlign: 'center', marginTop: '25px'}}>Leaderboards</h1>
+        <div className="container" style={{marginTop: '25px', background: 'var(--bs-body-color)', borderRadius: '11px', border: '25px solid var(--bs-body-color)', borderTopStyle: 'solid', borderRight: '15px solid var(--bs-body-color)', borderBottomStyle: 'solid', borderLeft: '15px solid var(--bs-body-color)'}}>
+          <div className="row">
+            <div className="col">
+              <div className="card">
+                <div className="card-body" style={{height: '550px'}}>
+                  <h4 className="card-title" style={{textAlign: 'center'}}>Weekly</h4>
+                  <div className="row d-flex flex-column" style={{marginBottom: '9px', borderRadius: '5px', borderBottom: '3px solid rgb(130,130,130)'}}>
+                    <div className="col d-flex flex-row align-items-center align-content-center align-self-center" style={{marginBottom: '0px'}}>
+                      <picture><img className="rounded-circle" src="assets/img/scenery/image6.jpg" style={{width: '65px', height: '65px'}} /></picture>
+                      <div style={{marginLeft: '10px'}}>
+                        <p style={{marginBottom: '0px', fontSize: '20px'}}>Username</p>
+                        <p className="fw-bold" style={{marginBottom: '0px', marginRight: '0px', fontSize: '10px', marginLeft: '2px'}}>324.32</p>
+                      </div>
+                      <div className="d-flex flex-row">
+                        <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '35px', marginTop: '25px'}}>
+                          <p className="fw-semibold" style={{marginBottom: '0px', color: 'var(--bs-gray-600)', fontSize: '12px'}}>Wins:</p>
+                          <p>36</p>
+                        </div>
+                        <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '30px', marginTop: '25px'}}>
+                          <p className="fw-semibold" style={{marginBottom: '0px', fontSize: '12px', color: 'var(--bs-gray-600)'}}>Losses:</p>
+                          <p>21</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row d-flex flex-column" style={{marginBottom: '9px', borderRadius: '5px', borderBottom: '3px solid rgb(130,130,130)'}}>
+                    <div className="col d-flex flex-row align-items-center align-content-center align-self-center" style={{marginBottom: '0px'}}>
+                      <picture><img className="rounded-circle" src="assets/img/scenery/image6.jpg" style={{width: '65px', height: '65px'}} /></picture>
+                      <div style={{marginLeft: '10px'}}>
+                        <p style={{marginBottom: '0px', fontSize: '20px'}}>Username</p>
+                        <p className="fw-bold" style={{marginBottom: '0px', marginRight: '0px', fontSize: '10px', marginLeft: '2px'}}>324.32</p>
+                      </div>
+                      <div className="d-flex flex-row">
+                        <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '35px', marginTop: '25px'}}>
+                          <p className="fw-semibold" style={{marginBottom: '0px', color: 'var(--bs-gray-600)', fontSize: '12px'}}>Wins:</p>
+                          <p>36</p>
+                        </div>
+                        <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '30px', marginTop: '25px'}}>
+                          <p className="fw-semibold" style={{marginBottom: '0px', fontSize: '12px', color: 'var(--bs-gray-600)'}}>Losses:</p>
+                          <p>21</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row d-flex flex-column" style={{marginBottom: '9px', borderRadius: '5px', borderBottom: '3px solid rgb(130,130,130)'}}>
+                    <div className="col d-flex flex-row align-items-center align-content-center align-self-center" style={{marginBottom: '0px'}}>
+                      <picture><img className="rounded-circle" src="assets/img/scenery/image6.jpg" style={{width: '65px', height: '65px'}} /></picture>
+                      <div style={{marginLeft: '10px'}}>
+                        <p style={{marginBottom: '0px', fontSize: '20px'}}>Username</p>
+                        <p className="fw-bold" style={{marginBottom: '0px', marginRight: '0px', fontSize: '10px', marginLeft: '2px'}}>324.32</p>
+                      </div>
+                      <div className="d-flex flex-row">
+                        <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '35px', marginTop: '25px'}}>
+                          <p className="fw-semibold" style={{marginBottom: '0px', color: 'var(--bs-gray-600)', fontSize: '12px'}}>Wins:</p>
+                          <p>36</p>
+                        </div>
+                        <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '30px', marginTop: '25px'}}>
+                          <p className="fw-semibold" style={{marginBottom: '0px', fontSize: '12px', color: 'var(--bs-gray-600)'}}>Losses:</p>
+                          <p>21</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="card">
+                <div className="card-body" style={{height: '550px'}}>
+                  <h4 className="card-title" style={{textAlign: 'center'}}>Monthly</h4>
+                  <div className="row d-flex flex-column" style={{marginBottom: '9px', borderRadius: '5px', borderBottom: '3px solid rgb(130,130,130)'}}>
+                    <div className="col d-flex flex-row align-items-center align-content-center align-self-center" style={{marginBottom: '0px'}}>
+                      <picture><img className="rounded-circle" src="assets/img/scenery/image6.jpg" style={{width: '65px', height: '65px'}} /></picture>
+                      <div style={{marginLeft: '10px'}}>
+                        <p style={{marginBottom: '0px', fontSize: '20px'}}>Username</p>
+                        <p className="fw-bold" style={{marginBottom: '0px', marginRight: '0px', fontSize: '10px', marginLeft: '2px'}}>324.32</p>
+                      </div>
+                      <div className="d-flex flex-row">
+                        <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '35px', marginTop: '25px'}}>
+                          <p className="fw-semibold" style={{marginBottom: '0px', color: 'var(--bs-gray-600)', fontSize: '12px'}}>Wins:</p>
+                          <p>36</p>
+                        </div>
+                        <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '30px', marginTop: '25px'}}>
+                          <p className="fw-semibold" style={{marginBottom: '0px', fontSize: '12px', color: 'var(--bs-gray-600)'}}>Losses:</p>
+                          <p>21</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col d-flex flex-row align-items-center align-content-center align-self-center" style={{marginBottom: '0px'}}>
+                      <picture><img className="rounded-circle" src="assets/img/scenery/image6.jpg" style={{width: '65px', height: '65px'}} /></picture>
+                      <div style={{marginLeft: '10px'}}>
+                        <p style={{marginBottom: '0px', fontSize: '20px'}}>Username</p>
+                        <p className="fw-bold" style={{marginBottom: '0px', marginRight: '0px', fontSize: '10px', marginLeft: '2px'}}>324.32</p>
+                      </div>
+                      <div className="d-flex flex-row">
+                        <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '35px', marginTop: '25px'}}>
+                          <p className="fw-semibold" style={{marginBottom: '0px', color: 'var(--bs-gray-600)', fontSize: '12px'}}>Wins:</p>
+                          <p>36</p>
+                        </div>
+                        <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '30px', marginTop: '25px'}}>
+                          <p className="fw-semibold" style={{marginBottom: '0px', fontSize: '12px', color: 'var(--bs-gray-600)'}}>Losses:</p>
+                          <p>21</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col d-flex flex-row align-items-center align-content-center align-self-center" style={{marginBottom: '0px'}}>
+                      <picture><img className="rounded-circle" src="assets/img/scenery/image6.jpg" style={{width: '65px', height: '65px'}} /></picture>
+                      <div style={{marginLeft: '10px'}}>
+                        <p style={{marginBottom: '0px', fontSize: '20px'}}>Username</p>
+                        <p className="fw-bold" style={{marginBottom: '0px', marginRight: '0px', fontSize: '10px', marginLeft: '2px'}}>324.32</p>
+                      </div>
+                      <div className="d-flex flex-row">
+                        <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '35px', marginTop: '25px'}}>
+                          <p className="fw-semibold" style={{marginBottom: '0px', color: 'var(--bs-gray-600)', fontSize: '12px'}}>Wins:</p>
+                          <p>36</p>
+                        </div>
+                        <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '30px', marginTop: '25px'}}>
+                          <p className="fw-semibold" style={{marginBottom: '0px', fontSize: '12px', color: 'var(--bs-gray-600)'}}>Losses:</p>
+                          <p>21</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col d-flex flex-row align-items-center align-content-center align-self-center" style={{marginBottom: '0px'}}>
+                      <picture><img className="rounded-circle" src="assets/img/scenery/image6.jpg" style={{width: '65px', height: '65px'}} /></picture>
+                      <div style={{marginLeft: '10px'}}>
+                        <p style={{marginBottom: '0px', fontSize: '20px'}}>Username</p>
+                        <p className="fw-bold" style={{marginBottom: '0px', marginRight: '0px', fontSize: '10px', marginLeft: '2px'}}>324.32</p>
+                      </div>
+                      <div className="d-flex flex-row">
+                        <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '35px', marginTop: '25px'}}>
+                          <p className="fw-semibold" style={{marginBottom: '0px', color: 'var(--bs-gray-600)', fontSize: '12px'}}>Wins:</p>
+                          <p>36</p>
+                        </div>
+                        <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '30px', marginTop: '25px'}}>
+                          <p className="fw-semibold" style={{marginBottom: '0px', fontSize: '12px', color: 'var(--bs-gray-600)'}}>Losses:</p>
+                          <p>21</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
           </section>
           <section className="clean-block about-us">
             <div className="container">
