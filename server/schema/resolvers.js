@@ -75,12 +75,16 @@ const resolvers = {
             return { token, user };
         },
 
-        logout: async (parent, args, context) => {
-            if (context.user) {
-                context.user = null;
-                return { message: 'You have been logged out!' };
-            }
-            
+        async logout(parent, args, context) {
+          const user = context.user;
+          if (!user) {
+            throw new AuthenticationError('You need to be logged in to perform this action.');
+          }
+      
+          context.token = '';
+          context.user = null;
+      
+          return { token: null, user: null };
         },
 
         updateUser: async (parent, args, context) => {
