@@ -14,7 +14,7 @@ function moneylineMath(moneyline, betAmount) {
 
 // For point spread knowing who covered
 function favCovered(favScore, dogScore, spread) {
-  const favCovered = false;
+  let favCovered = false;
   const finalSpread = dogScore - favScore;
   if (finalSpread < spread) {
     favCovered = true;

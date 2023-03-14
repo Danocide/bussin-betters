@@ -86,7 +86,7 @@ const Signup = () => {
                 value={formState.email}
                 onChange={handleChange}
                 />
-                <div className="mb-3"><label className="form-label" htmlFor="accountBalance">Account Balance</label>
+                {/* <div className="mb-3"><label className="form-label" htmlFor="accountBalance">Account Balance</label>
                 <input 
                 className="form-control item" 
                 name="accountBalance"
@@ -95,7 +95,7 @@ const Signup = () => {
                 value={formState.accountBalance}
                 onChange={handleChange}
                 />
-                </div>
+                </div> */}
                 </div>
                 <button className="btn btn-primary" type="submit">Sign Up</button>
               </form>
