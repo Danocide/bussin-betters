@@ -8,11 +8,10 @@ const transactionSchema = new Schema({
         minlength: 1,
     },
 
-    type: {
+    transType: {
         type: String,
-        required: true,
-        unique: true,
-        trim: true,
+        enum: ['deposit', 'withdrawal'],
+        index: false,
     },
 
     user: {

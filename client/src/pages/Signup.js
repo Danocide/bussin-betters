@@ -11,6 +11,7 @@ const Signup = () => {
     username: '',
     email: '',
     password: '',
+    accountBalance: 100,
   });
   const [addUser, { error, data }] = useMutation(ADD_USER);
 
@@ -29,7 +30,9 @@ const Signup = () => {
 
     try {
       const { data } = await addUser({
-        variables: { ...formState },
+        variables: { 
+          ...formState,
+        },
       });
 
       Auth.login(data.addUser.token);
@@ -83,6 +86,16 @@ const Signup = () => {
                 value={formState.email}
                 onChange={handleChange}
                 />
+                <div className="mb-3"><label className="form-label" htmlFor="accountBalance">Account Balance</label>
+                <input 
+                className="form-control item" 
+                name="accountBalance"
+                type="number" 
+                id="accountBalance" 
+                value={formState.accountBalance}
+                onChange={handleChange}
+                />
+                </div>
                 </div>
                 <button className="btn btn-primary" type="submit">Sign Up</button>
               </form>

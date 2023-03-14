@@ -22,13 +22,12 @@ const Login = (props) => {
   // submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(formState);
     try {
       const { data } = await login({
         variables: { ...formState },
       });
-
       Auth.login(data.login.token);
+      console.log(data); 
     } catch (e) {
       console.error(e);
     }
@@ -42,52 +41,84 @@ const Login = (props) => {
 
       return (
         <div>
+
           <main className="page login-page" style={{background: 'url("assets/img/16407114115545.jpg") top / auto'}}>
             <section className="clean-block clean-form dark" style={{color: 'rgba(28,28,28,0.85)', background: `rgba(16,16,16,0.83)`, height: '1110px'}}>
+
               <div className="container">
                 <div className="block-heading" style={{padding: `200px 200px 0px 200px`}}>
                   <h2 className="text-info">Log In</h2>
-                  <p style={{color: 'rgb(255,255,255)'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+                  <p style={{ color: "rgb(255,255,255)" }}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nunc quam urna, dignissim nec auctor in, mattis vitae leo.
+                  </p>
                 </div>
                 <div>
-                {data ? (
-              <p>
-                Success! You may now head{' '}
-                <Link to="/">back to the homepage.</Link>
-              </p>
-            ) : (
-                <form onSubmit={handleFormSubmit}>
-                  <div className="mb-3">
-                    <label className="form-label" htmlFor="email">Email</label>
-                    <input 
-                    className="form-control item" 
-                    name="email" 
-                    type="email" 
-                    value={formState.email} 
-                    onChange={handleChange} 
-                    id="email" 
-                    />
-                  </div>
-                  <div className="mb-3">
-                    <label className="form-label" htmlFor="password">Password</label>
-                    <input className="form-control" type="password" id="password" />
-                  </div>
-                  <div className="mb-3">
-                    <div className="form-check">
-                        <input className="form-check-input" type="checkbox" id="checkbox" />
-                        <label className="form-check-label" htmlFor="checkbox">Remember me</label>
+                  {data ? (
+                    <p>
+                      Success! You may now head{" "}
+                      <Link to="/">back to the homepage.</Link>
+                    </p>
+                  ) : (
+                    <form onSubmit={handleFormSubmit}>
+                      <div className="mb-3">
+                        <label className="form-label" htmlFor="email">
+                          Email
+                        </label>
+                        <input
+                          className="form-control item"
+                          name="email"
+                          type="email"
+                          value={formState.email}
+                          onChange={handleChange}
+                          id="email"
+                        />
+                      </div>
+                      <div className="mb-3">
+                        <label className="form-label" htmlFor="password">
+                          Password
+                        </label>
+                        <input
+                          className="form-control"
+                          type="password"
+                          id="password"
+                          name="password"
+                          value={formState.password}
+                          onChange={handleChange}
+                        />
+                      </div>
+                      <div className="mb-3">
+                        <div className="form-check">
+                          <input
+                            className="form-check-input"
+                            type="checkbox"
+                            id="checkbox"
+                          />
+                          <label
+                            className="form-check-label"
+                            htmlFor="checkbox"
+                          >
+                            Remember me
+                          </label>
+                        </div>
+                      </div>
+                      <button
+                        className="btn btn-primary"
+                        style={{ cursor: "pointer" }}
+                        type="submit"
+                      >
+                        Log In
+                      </button>
+                    </form>
+                  )}
+                  ;
+                  {error && (
+                    <div className="my-3 p-3 bg-danger text-white">
+                      {error.message}
                     </div>
-                  </div>
-                        <button className="btn btn-primary" style={{ cursor: 'pointer' }} type="submit">Log In</button>
-                </form>
-                )};
-              {error && (
-                <div className="my-3 p-3 bg-danger text-white">
-                  {error.message}
+                  )}
                 </div>
-              )}
-            </div>
-            </div>
+              </div>
             </section>
           </main>
         </div>
