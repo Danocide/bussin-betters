@@ -3,10 +3,10 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
   type User {
     _id: ID!
-    user: String!
+    username: String
     email: String!
     password: String!
-    accountBalance: Float!
+    accountBalance: Int!
     bets: [Bets!]!
     transaction: [Transaction!]!
     payment: [Payment!]!
@@ -35,7 +35,7 @@ const typeDefs = gql`
     _id: ID!
     user: User!
     amount: Float!
-    type: String!
+    transType: String!
     bets: [Bets!]!
 }
 
@@ -56,20 +56,21 @@ type Auth {
     payment: [Payment!]!
     paymentbyId(id: ID!): Payment
     paymentbyUser(user:ID!): [Payment!]!
+    me: User
   }
 
     type Mutation {
-    addUser(user: String!, email: String!, password: String!, accountBalance: Float!): User
-    login(user: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!, accountBalance: Int!): Auth
+    login(email: String!, password: String!): Auth
     logout: Auth
-    updateUser(id: ID!, user: String!, email: String! password: String!, accountBalance: Float!): User
+    updateUser(id: ID!, username: String!, email: String! password: String!, accountBalance: Int!): User
     addBet(user: ID!, game: String!, amount: Float!): Bets
     updateBet(id: ID!, user: ID!, game: String!, amount: Float!, result: String!): Bets
     deleteBet(id: ID!): Bets
     addPayment(user: ID!, amount: Float!): Payment
     deletePayment(id: ID!): Payment
-    addTransaction(user: ID!, amount: Float!, type: String!): Transaction
-    updateTransaction(id: ID!, user: ID!, amount: Float!, type: String!): Transaction
+    addTransaction(user: ID!, amount: Float!, transType: String!): Transaction
+    updateTransaction(id: ID!, user: ID!, amount: Float!, transType: String!): Transaction
     deleteTransaction(id: ID!): Transaction
     deleteUser(id: ID!): User
     }

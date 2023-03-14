@@ -1,30 +1,31 @@
 [
     {
     "amount": 100,
-    "type": "deposit"
+    "transType": "deposit"
     },
+
     {
     "amount": 200,
-    "type": "withdrawal"
+    "transType": "withdrawal"
     },
     {
     "amount": 300,
-    "type": "deposit"
+    "transType": "deposit"
     },
     {
     "amount": 400,
-    "type": "withdrawal"
+    "transType": "withdrawal"
     },
     {
     "amount": 500,
-    "type": "deposit"
+    "transType": "deposit"
     },
     {
     "amount": 600,
-    "type": "withdrawal"
+    "transType": "withdrawal"
     },
     {
     "amount": 700,
-    "type": "deposit"
+    "transType": "deposit"
     }
 ]

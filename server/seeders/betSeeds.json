@@ -17,7 +17,7 @@
 {
 "game": "Basketball",
 "amount": 100,
-"result": "Push"
+"result": "Draw"
 },
 {
 "game": "Hockey",
@@ -42,6 +42,6 @@
 {
 "game": "Cricket",
 "amount": 100,
-"result": "Push"
+"result": "Draw"
 }
 ]
