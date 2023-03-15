@@ -28,6 +28,11 @@ const userSchema = new Schema({
     default: 100,
     },
 
+  description: {
+    type: String,
+    default: 'No description',
+  },
+
   bets: [
     {
       type: Schema.Types.ObjectId,

@@ -209,3 +209,14 @@ export const DELETE_PAYMENT = gql`
     }
 `;
 
+export const UPDATE_USER_DESCRIPTION = gql`
+    mutation updateUserDescription($description: String!) {
+        updateUserDescription(description: $description) {
+            _id
+            username
+            email
+            accountBalance
+            description
+        }
+    }
+`;
