@@ -1,7 +1,7 @@
 import React from "react";
 
 // In our return method, we use the map method to return a new array of `li` and `img` elements that are specific to each search result
-function CreateCards(props) {
+function CreateMLSCards(props) {
   return (
     <div className="row">
       {props.results.map((item) => (
@@ -11,28 +11,34 @@ function CreateCards(props) {
               <p>{item.home_team}</p>
             </div>
             <div className="card-body d-flex flex-row" style={{fontSize: '16px', marginLeft: '-84px'}}>
-              <p>-</p>
+              <p>v</p>
             </div>
             <div className="card-body d-flex flex-row" style={{marginLeft: '-79px'}}>
               <p>{item.away_team}</p>
             </div>
             <div className="card-body d-flex flex-row" style={{marginLeft: '20px'}}>
-              <p>BetInfo</p>
+              <p>Home:</p>
             </div>
             <div className="card-body d-flex flex-row">
-              <p>BetInfo</p>
+              <p>{item.bookmakers[0].markets[0].outcomes[0].price}</p>
             </div>
             <div className="card-body d-flex flex-row">
-              <p>BetInfo</p>
+              <p>Away:</p>
             </div>
             <div className="card-body d-flex flex-row" style={{fontSize: '16px'}}>
-              <p>23</p>
+              <p>{item.bookmakers[0].markets[0].outcomes[1].price}</p>
+            </div>
+            <div className="card-body d-flex flex-row">
+              <p>Draw:</p>
+            </div>
+            <div className="card-body d-flex flex-row" style={{fontSize: '16px'}}>
+              <p>{item.bookmakers[0].markets[0].outcomes[2].price}</p>
             </div>
             <div className="card-body d-flex flex-row" style={{fontSize: '16px', marginLeft: '0px'}}>
-              <p>-</p>
+              <p>Over: {item.bookmakers[9].markets[1].outcomes[0].point}/ {item.bookmakers[9].markets[1].outcomes[0].price}</p>
             </div>
             <div className="card-body d-flex flex-row" style={{fontSize: '16px'}}>
-              <p>21</p>
+              <p>Under: {item.bookmakers[9].markets[1].outcomes[1].point}/ {item.bookmakers[9].markets[1].outcomes[1].price}</p>
             </div><button className="btn btn-primary" type="button" style={{height: '45px'}}>Bet Now!</button>
           </div>
         </div>
@@ -41,4 +47,4 @@ function CreateCards(props) {
   );
   }
 
-export default CreateCards;
+export default CreateMLSCards;
