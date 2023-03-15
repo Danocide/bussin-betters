@@ -15,8 +15,8 @@ var keyArr = ['2ca9e05eb2mshaad55f69b7a7e24p152fdajsn1f4c0544ad64',
 	};
 	
 	
-	export async function getOddsBySport(sport) {
-		const response = await fetch(`${API_URL}/${sport}/odds`, {
+	export async function getOddsBySport(sport, region, oddsFormat, market) {
+		const response = await fetch(`${API_URL}/${sport}/odds?regions=${region}&oddsFormat=${oddsFormat}&markets=${market}&dateFormat=iso`, {
 			method: 'GET',
 			headers: {
 				'x-rapidapi-host': 'odds.p.rapidapi.com',

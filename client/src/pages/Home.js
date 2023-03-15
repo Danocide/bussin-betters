@@ -1,8 +1,8 @@
 import React from 'react';
-import GetMLBScores from '../components/SportsScores/MLBScores';
-import GetNBAScores from '../components/SportsScores/NBAScores';
-import GetNFLScores from '../components/SportsScores/NFLScores';
-import GetMLSScores from '../components/SportsScores/MLSScores';
+import GetMLBOdds from '../components/SportsOdds/MLBOdds';
+import GetNBAOdds from '../components/SportsOdds/NBAOdds';
+import GetXFLOdds from '../components/SportsOdds/XFLOdds';
+import GetMLSOdds from '../components/SportsOdds/MLSOdds';
 
 
 
@@ -37,7 +37,40 @@ export default class App extends React.Component {
                   <h2 className="accordion-header" role="tab"><button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-1" aria-expanded="false" aria-controls="accordion-1 .item-1">NFL</button></h2>
                   <div className="accordion-collapse collapse item-1" role="tabpanel" data-bs-parent="#accordion-1" style={{transform: 'perspective(0px)'}}>
                     <div className="accordion-body d-flex flex-column">
-{/* <GetNFLScores/> */}
+                      {/* <GetXFLOdds/> */}
+                      <div className="row"> 
+        <div className="col-xxl-12" style={{marginLeft: '-10px'}}>
+          <div className="card d-flex flex-row align-items-center" style={{height: '57px', width: '1352px'}}>
+            <div className="card-body" style={{fontSize: '16px'}}>
+              <p>Seattle Sea Dragons</p>
+            </div>
+            <div className="card-body d-flex flex-row" style={{fontSize: '16px', marginLeft: '-84px'}}>
+              <p>@</p>
+            </div>
+            <div className="card-body d-flex flex-row" style={{marginLeft: '-79px'}}>
+              <p>Las Vegas Vipers</p>
+            </div>
+            <div className="card-body d-flex flex-row" style={{marginLeft: '20px'}}>
+              <p>Home:</p>
+            </div>
+            <div className="card-body d-flex flex-row">
+              <p>110</p>
+            </div>
+            <div className="card-body d-flex flex-row">
+              <p>Away:</p>
+            </div>
+            <div className="card-body d-flex flex-row" style={{fontSize: '16px'}}>
+              <p>-120</p>
+            </div>
+            <div className="card-body d-flex flex-row" style={{fontSize: '16px', marginLeft: '0px'}}>
+              <p>Over: 42.5/ -110</p>
+            </div>
+            <div className="card-body d-flex flex-row" style={{fontSize: '16px'}}>
+              <p>Under: 42.5/ -110</p>
+            </div><button className="btn btn-primary" type="button" style={{height: '45px'}}>Bet Now!</button>
+          </div>
+        </div>
+    </div>
                     </div>
                   </div>
                 </div>
@@ -45,7 +78,7 @@ export default class App extends React.Component {
                   <h2 className="accordion-header" role="tab"><button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-2" aria-expanded="false" aria-controls="accordion-1 .item-2">NBA</button></h2>
                   <div className="accordion-collapse collapse item-2" role="tabpanel" data-bs-parent="#accordion-1">
                     <div className="accordion-body">
-                      <GetNBAScores/>
+                      {/* <GetNBAOdds/> */}
                       <div className="row" />
                       <div className="row" />
                       <div className="row" />
@@ -57,7 +90,7 @@ export default class App extends React.Component {
                   <h2 className="accordion-header" role="tab"><button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-3" aria-expanded="false" aria-controls="accordion-1 .item-3">MLB</button></h2>
                   <div className="accordion-collapse collapse item-3" role="tabpanel" data-bs-parent="#accordion-1">
                     <div className="accordion-body">
-                      <GetMLBScores/>
+                      {/* <GetMLBOdds/> */}
                       <div className="row" />
                       <div className="row" />
                       <div className="row" />
@@ -69,7 +102,45 @@ export default class App extends React.Component {
                   <h2 className="accordion-header" role="tab"><button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-4" aria-expanded="false" aria-controls="accordion-1 .item-4">MLS</button></h2>
                   <div className="accordion-collapse collapse item-4" role="tabpanel" data-bs-parent="#accordion-1">
                     <div className="accordion-body">
-                      <GetMLSScores/>
+                      {/* <GetMLSOdds/> */}
+                      <div className="col-xxl-12" style={{marginLeft: '-10px'}}>
+          <div className="card d-flex flex-row align-items-center" style={{height: '57px', width: '1352px'}}>
+            <div className="card-body" style={{fontSize: '16px'}}>
+              <p>Seattle Sea Dragons</p>
+            </div>
+            <div className="card-body d-flex flex-row" style={{fontSize: '16px', marginLeft: '-84px'}}>
+              <p>@</p>
+            </div>
+            <div className="card-body d-flex flex-row" style={{marginLeft: '-79px'}}>
+              <p>Las Vegas Vipers</p>
+            </div>
+            <div className="card-body d-flex flex-row" style={{marginLeft: '20px'}}>
+              <p>Home:</p>
+            </div>
+            <div className="card-body d-flex flex-row">
+              <p>110</p>
+            </div>
+            <div className="card-body d-flex flex-row">
+              <p>Away:</p>
+            </div>
+            <div className="card-body d-flex flex-row" style={{fontSize: '16px'}}>
+              <p>-120</p>
+            </div>
+            <div className="card-body d-flex flex-row">
+              <p>Draw:</p>
+            </div>
+            <div className="card-body d-flex flex-row" style={{fontSize: '16px'}}>
+              <p>-120</p>
+            </div>
+            <div className="card-body d-flex flex-row" style={{fontSize: '16px', marginLeft: '0px'}}>
+              <p>Over: 42.5/ -110</p>
+            </div>
+            <div className="card-body d-flex flex-row" style={{fontSize: '16px'}}>
+              <p>Under: 42.5/ -110</p>
+            </div><button className="btn btn-primary" type="button" style={{height: '45px'}}>Bet Now!</button>
+          </div>
+        </div>
+    </div>
                       <div className="row" />
                       <div className="row" />
                       <div className="row" />
@@ -78,7 +149,6 @@ export default class App extends React.Component {
                   </div>
                 </div>
               </div>
-            </div>
         <div>
         <h1 style={{textAlign: 'center', marginTop: '25px'}}>Leaderboards</h1>
         <div className="container" style={{marginTop: '25px', background: 'var(--bs-body-color)', borderRadius: '11px', border: '25px solid var(--bs-body-color)', borderTopStyle: 'solid', borderRight: '15px solid var(--bs-body-color)', borderBottomStyle: 'solid', borderLeft: '15px solid var(--bs-body-color)'}}>
