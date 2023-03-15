@@ -273,7 +273,7 @@ export default class App extends React.Component {
                   <div className="card text-center clean-card"><img className="card-img-top w-100 d-block" src="assets/img/avatars/avatar1.jpg" />
                     <div className="card-body info">
                       <h4 className="card-title">John Smith</h4>
-                      <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                      <p className="card-text">My wife wanted to leave me because of all the money I had been losing to my friends with traditional betting sites I even used up all my daughters college tuition! Thanks to Bhet Stone, now I get partial custody on weekends!</p>
                       <div className="icons"><a href="#"><i className="icon-social-facebook" /></a><a href="#"><i className="icon-social-instagram" /></a><a href="#"><i className="icon-social-twitter" /></a></div>
                     </div>
                   </div>
