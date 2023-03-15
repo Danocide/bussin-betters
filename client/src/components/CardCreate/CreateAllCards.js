@@ -1,4 +1,5 @@
 import React from "react";
+import ModalCreate from "../Modal.js";
 
 // In our return method, we use the map method to return a new array of `li` and `img` elements that are specific to each search result
 function CreateCards(props) {
@@ -33,7 +34,9 @@ function CreateCards(props) {
             </div>
             <div className="card-body d-flex flex-row" style={{fontSize: '16px'}}>
               <p>Under: {item.bookmakers[0].markets[1].outcomes[1].point}/ {item.bookmakers[0].markets[1].outcomes[1].price}</p>
-            </div><button className="btn btn-primary" type="button" style={{height: '45px'}}>Bet Now!</button>
+            </div>
+            {/* <button className="btn btn-primary" type="button" style={{height: '45px'}}>Bet Now!</button> */}
+            <ModalCreate/>
           </div>
         </div>
       ))}
