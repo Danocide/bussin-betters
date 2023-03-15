@@ -1,51 +1,23 @@
 import { gql } from '@apollo/client';
 
 export const QUERY_USER = gql`
-  query {
-    user {
+  query user($username: String!) {
+    user (username: $username) {
       _id
       username
       email
-      }
-      transactions {
-        _id
-        amount
-        transType
-        createdAt
-        payment {
-          _id
-          amount
-        }
-        bets {
-          _id
-          amount
-        }
+      accountBalance
     }
   }
 `;
 
 export const QUERY_ME = gql`
-  query me($username: String) {
-    me(username: $username) {
+  query me {
+    me {
       _id
       username
       email
-      bets {
-        _id
-        game
-        amount
-        result
-      }
-      transactions {
-        _id
-        amount
-        transType
-        createdAt
-      }
-      payments {
-        _id
-        amount
-      }
+      accountBalance
     }
   }
 `;
@@ -56,12 +28,6 @@ export const QUERY_USER_BY_ID = gql`
       _id
       username
       email
-      bets {
-        _id
-        game
-        amount
-        result
-      }
     }
   }
 `;

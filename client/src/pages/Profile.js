@@ -1,44 +1,35 @@
 import React from 'react';
-// import { Navigate, useParams } from 'react-router-dom';
-// import { useQuery } from '@apollo/client';
-
-// import { QUERY_ME } from '../utils/queries';
-
-// import Auth from '../utils/auth';
+import {useParams } from 'react-router-dom';
+import { useQuery } from '@apollo/client';
+import { QUERY_ME, QUERY_USER } from '../utils/queries';
 
 const Profile = () => {
-  // const { username: userParam } = useParams();
+  const { username: userParam } = useParams();
+  console.log(userParam);
+  const { loading, data, error } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
+    variables: { username: userParam },
+  });
 
-  // // // Determine which query to use based on whether a userParam is provided
-  // // const query = userParam ? QUERY_USER : QUERY_ME;
+  const user = data?.me || data?.user || {};
+  console.log(user);
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
-  // // // Include variables option only if query expects a variable
-  // // const options = userParam ? { variables: { username: userParam } } : {};
+  if (error) {
+    console.log(error);
+    return <div>Error: {error.message}</div>;
+  }
 
-  // const { loading, data } = useQuery(QUERY_ME, {
-  //   variables: { username: userParam },
-  //   onError: (error) => console.log(error),
-  // });
+  if (!user?.username) {
+    return (
+      <h4>
+        You need to be logged in to see this. Use the navigation links above to
+        sign up or log in!
+      </h4>
+    );
+  }
 
-  // const user = data?.me || {};
-  // // navigate to personal profile page if username is yours
-  // if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
-  //   return <Navigate to="/me" />;
-  // }
-
-  // if (loading) {
-  //   return <div>Loading...</div>;
-  // }
-
-  // if (!user?.username) {
-  //   return (
-  //     <h4>
-  //       You need to be logged in to see this. Use the navigation links above to
-  //       sign up or log in!
-  //     </h4>
-  //   );
-  // }
-  // console.log(user);
 
           return (
       
@@ -46,11 +37,12 @@ const Profile = () => {
               <section className="d-flex flex-grow-0 flex-shrink-1 clean-block clean-pricing dark" style={{height: '660px'}}>
                 <div className="card d-flex flex-column flex-shrink-1 align-items-center" style={{width: '400px', height: '550px', margin: '30px'}}>
                   <picture><img className="rounded-circle" src="assets/img/13nfl-matchups-kc-videoSixteenByNine3000.jpg" alt='kc' style={{width: '200px', height: '200px', marginTop: '25px', marginBottom: '10px'}} /></picture>
-                  <h1 style={{fontSize: '30px', marginBottom: '-1px'}}>Username</h1>
-                  <p>John Doe</p>
+                  <h1 style={{fontSize: '30px', marginBottom: '-1px'}}>{user.username}</h1>
+                  <p>{user.email}</p>
+                  <p>Balance: {user.accountBalance}</p>
                   <p className="text-center">This is an example of the "about me" section for the user.</p>
                   <div className="row">
-                    <div className="col d-flex justify-content-around" style={{paddingTop: '65px', width: '238px', opacity: '0.44'}}><i className="icon ion-social-facebook-outline" style={{fontSize: '55px'}} /><i className="icon ion-social-instagram-outline" style={{fontSize: '55px'}} /><i className="icon ion-social-twitter-outline" style={{fontSize: '55px'}} /></div>
+                    <div className="col d-flex justify-content-around" style={{paddingTop: '25px', width: '238px', opacity: '0.44'}}><i className="icon ion-social-facebook-outline" style={{fontSize: '55px'}} /><i className="icon ion-social-instagram-outline" style={{fontSize: '55px'}} /><i className="icon ion-social-twitter-outline" style={{fontSize: '55px'}} /></div>
                   </div>
                 </div>
                 <div className="container" style={{width: '850px', marginTop: '40px'}}>

@@ -2,7 +2,14 @@ import decode from 'jwt-decode';
 
 class AuthService {
   getProfile() {
-    return decode(this.getToken());
+    const token = this.getToken();
+    if (token) {
+      // Decode the token to get the user information
+      const decodedToken = decode(token);
+      // Return the user information
+      return decodedToken.data;
+    }
+    return null;
   }
 
   loggedIn() {
