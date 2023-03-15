@@ -5,7 +5,7 @@ function CreateCards(props) {
   return (
     <div className="row">
       {props.results.map((item) => (
-        <div className="col-xxl-12" style={{marginLeft: '-10px'}}>
+        <div key = {item.id} className="col-xxl-12" style={{marginLeft: '-10px'}}>
           <div className="card d-flex flex-row align-items-center" style={{height: '57px', width: '1352px'}}>
             <div className="card-body" style={{fontSize: '16px'}}>
               <p>{item.away_team}</p>
