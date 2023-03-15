@@ -43,7 +43,7 @@ const Navbar = () => {
     <nav className="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar" style={{background: 'var(--bs-accordion-color)', color: 'var(--bs-accordion-active-color)'}}>
       <div className="container">
         <i className="icon ion-ios-americanfootball-outline" style={{paddingRight: '10px', fontSize: '35px'}} />
-        <Link className="navbar-brand logo" to="/">Bet Stone</Link>
+        <Link className="navbar-brand logo" to="/">Bhet Stone</Link>
         <button data-bs-toggle="collapse" className="navbar-toggler" data-bs-target="#navcol-1">
           <span className="visually-hidden">Toggle navigation</span>
           <span className="navbar-toggler-icon" />
