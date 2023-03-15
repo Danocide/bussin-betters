@@ -22,8 +22,8 @@ export default class App extends React.Component {
               <div className="container-fluid"><button data-bs-toggle="collapse" className="navbar-toggler" data-bs-target="#navcol-2"><span className="visually-hidden">Toggle navigation</span><span className="navbar-toggler-icon" /></button>
                 <div className="collapse navbar-collapse justify-content-center" id="navcol-2" style={{paddingLeft: '0px', marginLeft: '0px', color: 'rgb(255,255,255)'}}>
                   <ul className="navbar-nav">
-                    <li className="nav-item"><a className="nav-link active" href="#" style={{color: 'rgba(255,255,255,0.9)'}}>ALL SPORTS</a></li>
-                    <li className="nav-item"><a className="nav-link" href="#" style={{color: 'rgba(255,255,255,0.9)'}}>NFL</a></li>
+                    <li className="nav-item"><a className="nav-link active" href="#" style={{color: 'rgba(255,255,255,0.55)'}}>ALL SPORTS</a></li>
+                    <li className="nav-item"><a className="nav-link" href="#" style={{color: 'rgba(255,255,255,0.55)'}}>NFL</a></li>
                     <li className="nav-item"><a className="nav-link" href="#" style={{color: 'rgba(255,255,255,0.55)'}}>NBA</a></li>
                     <li className="nav-item"><a className="nav-link" href="#" style={{color: 'rgba(255,255,255,0.55)'}}>MLB</a></li>
                     <li className="nav-item"><a className="nav-link" href="#" style={{color: 'rgba(255,255,255,0.55)'}}>SOCCER</a></li>
@@ -36,41 +36,10 @@ export default class App extends React.Component {
                 <div className="accordion-item">
                   <h2 className="accordion-header" role="tab"><button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-1" aria-expanded="false" aria-controls="accordion-1 .item-1">NFL</button></h2>
                   <div className="accordion-collapse collapse item-1" role="tabpanel" data-bs-parent="#accordion-1" style={{transform: 'perspective(0px)'}}>
-                    <div className="accordion-body d-flex flex-column">
+                    <div className="accordion-body d-flex flex-column" >
                       {/* <GetXFLOdds/> */}
                       <div className="row"> 
-        <div className="col-xxl-12" style={{marginLeft: '-10px'}}>
-          <div className="card d-flex flex-row align-items-center" style={{height: '57px', width: '1352px'}}>
-            <div className="card-body" style={{fontSize: '16px'}}>
-              <p>Seattle Sea Dragons</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{fontSize: '16px', marginLeft: '-84px'}}>
-              <p>@</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{marginLeft: '-79px'}}>
-              <p>Las Vegas Vipers</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{marginLeft: '20px'}}>
-              <p>Home:</p>
-            </div>
-            <div className="card-body d-flex flex-row">
-              <p>110</p>
-            </div>
-            <div className="card-body d-flex flex-row">
-              <p>Away:</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{fontSize: '16px'}}>
-              <p>-120</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{fontSize: '16px', marginLeft: '0px'}}>
-              <p>Over: 42.5/ -110</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{fontSize: '16px'}}>
-              <p>Under: 42.5/ -110</p>
-            </div><button className="btn btn-primary" type="button" style={{height: '45px'}}>Bet Now!</button>
-          </div>
-        </div>
-    </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -78,7 +47,7 @@ export default class App extends React.Component {
                   <h2 className="accordion-header" role="tab"><button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-2" aria-expanded="false" aria-controls="accordion-1 .item-2">NBA</button></h2>
                   <div className="accordion-collapse collapse item-2" role="tabpanel" data-bs-parent="#accordion-1">
                     <div className="accordion-body">
-                      {/* <GetNBAOdds/> */}
+                      <GetNBAOdds/>
                       <div className="row" />
                       <div className="row" />
                       <div className="row" />
@@ -103,44 +72,7 @@ export default class App extends React.Component {
                   <div className="accordion-collapse collapse item-4" role="tabpanel" data-bs-parent="#accordion-1">
                     <div className="accordion-body">
                       {/* <GetMLSOdds/> */}
-                      <div className="col-xxl-12" style={{marginLeft: '-10px'}}>
-          <div className="card d-flex flex-row align-items-center" style={{height: '57px', width: '1352px'}}>
-            <div className="card-body" style={{fontSize: '16px'}}>
-              <p>Seattle Sea Dragons</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{fontSize: '16px', marginLeft: '-84px'}}>
-              <p>@</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{marginLeft: '-79px'}}>
-              <p>Las Vegas Vipers</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{marginLeft: '20px'}}>
-              <p>Home:</p>
-            </div>
-            <div className="card-body d-flex flex-row">
-              <p>110</p>
-            </div>
-            <div className="card-body d-flex flex-row">
-              <p>Away:</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{fontSize: '16px'}}>
-              <p>-120</p>
-            </div>
-            <div className="card-body d-flex flex-row">
-              <p>Draw:</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{fontSize: '16px'}}>
-              <p>-120</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{fontSize: '16px', marginLeft: '0px'}}>
-              <p>Over: 42.5/ -110</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{fontSize: '16px'}}>
-              <p>Under: 42.5/ -110</p>
-            </div><button className="btn btn-primary" type="button" style={{height: '45px'}}>Bet Now!</button>
-          </div>
-        </div>
-    </div>
+                      </div> 
                       <div className="row" />
                       <div className="row" />
                       <div className="row" />
