@@ -1,4 +1,5 @@
 import React from "react";
+import ModalCreate from "../Modal.js";
 
 function CreateCards(props) {
   return (
@@ -22,6 +23,7 @@ function CreateCards(props) {
           {/* <p>Under: {item.bookmakers[0].markets[1].outcomes[1].point}/ {item.bookmakers[0].markets[1].outcomes[1].price}</p> */}
         </div>
         <button className="btn btn-primary" type="button" style={{ height: '45px', padding: '0 20px', fontSize: '16px', marginRight: '6px', marginBottom: '15px', borderRadius: '0' }}>Bet Now!</button>
+        <ModalCreate/>
       </div>
     </div>
       ))}
