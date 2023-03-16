@@ -23,7 +23,7 @@ const GetMLSOdds = () => {
 
 const [oddsResults, setoddsResults] = useState([]);
 const searchMLSOdds = async () => {
-  const response = await funcs.getOddsBySport('soccer_usa_mls', 'us', 'american', 'h2h,totals');
+  const response = await funcs.getOddsBySport('soccer_usa_mls', 'us', 'american', 'h2h,totals,spreads');
   setoddsResults(response);
   console.log(response);
 };
