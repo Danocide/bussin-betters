@@ -49,8 +49,7 @@ const Login = (props) => {
                 <div className="block-heading" style={{padding: `200px 200px 0px 200px`}}>
                   <h2 className="text-info">Log In</h2>
                   <p style={{ color: "rgb(255,255,255)" }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nunc quam urna, dignissim nec auctor in, mattis vitae leo.
+                    Log in to your account to begin making your bets! No money required!
                   </p>
                 </div>
                 <div>

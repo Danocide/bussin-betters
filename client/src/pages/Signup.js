@@ -47,7 +47,7 @@ const Signup = () => {
             <div className="container">
               <div className="block-heading">
                 <h2 className="text-info">Registration</h2>
-                <p style={{color: 'rgb(255,255,255)'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+                <p style={{color: 'rgb(255,255,255)'}}>Join today to recieve a bonus deposit of credits to show your friends and family you can make good choices!</p>
               </div>
               <div>
               {data ? (
