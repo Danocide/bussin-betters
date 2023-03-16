@@ -14,7 +14,7 @@ export default class App extends React.Component {
           <section className="clean-block clean-hero" style={{color: 'rgba(28,28,28,0.85)', background: 'url("assets/img/12nfl-sked-spencer-videoSixteenByNine3000.jpg") center / cover, url("assets/img/13nfl-matchups-kc-videoSixteenByNine3000.jpg"), url("assets/img/16407114115545.jpg")', height: '1100px'}}>
             <div className="text">
               <h2>Welcome to Bhet Stone</h2>
-              <p>This is your wife's favorite sports betting website. No credit cards. Just bragging rights</p><button className="btn btn-outline-light btn-lg" type="button" data-bs-target="SportsNav">BET NOW</button>
+              <p>This is your wife's favorite sports betting website. No credit cards. Just bragging rights and a chance to sharpen your betting skills.</p><button className="btn btn-outline-light btn-lg" type="button" data-bs-target="SportsNav">BET NOW</button>
             </div>
           </section>
           <section className="clean-block clean-info dark">
@@ -34,7 +34,7 @@ export default class App extends React.Component {
             <div className="col">
               <div className="accordion" role="tablist" id="accordion-1">
                 <div className="accordion-item">
-                  <h2 className="accordion-header" role="tab"><button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-1" aria-expanded="false" aria-controls="accordion-1 .item-1">NFL</button></h2>
+                  <h2 className="accordion-header" role="tab"><button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-1" aria-expanded="false" aria-controls="accordion-1 .item-1">XFL</button></h2>
                   <div className="accordion-collapse collapse item-1" role="tabpanel" data-bs-parent="#accordion-1" style={{transform: 'perspective(0px)'}}>
                     <div className="accordion-body d-flex flex-column" >
                       {/* <GetXFLOdds/> */}
@@ -47,7 +47,7 @@ export default class App extends React.Component {
                   <h2 className="accordion-header" role="tab"><button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-2" aria-expanded="false" aria-controls="accordion-1 .item-2">NBA</button></h2>
                   <div className="accordion-collapse collapse item-2" role="tabpanel" data-bs-parent="#accordion-1">
                     <div className="accordion-body">
-                      <GetNBAOdds/>
+                      {/* <GetNBAOdds/> */}
                       <div className="row" />
                       <div className="row" />
                       <div className="row" />

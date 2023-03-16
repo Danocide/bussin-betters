@@ -22,7 +22,7 @@ const GetMLBOdds = () => {
 
 const [oddsResults, setoddsResults] = useState([]);
 const searchMLBOdds = async () => {
-  const response = await funcs.getOddsBySport('baseball_mlb_preseason', 'us', 'american', 'h2h,totals');
+  const response = await funcs.getOddsBySport('baseball_mlb_preseason', 'us', 'american', 'h2h,totals,spreads');
   setoddsResults(response);
   console.log(response);
 };

@@ -23,7 +23,7 @@ const GetNBAScores = () => {
 
 const [oddsResults, setoddsResults] = useState([]);
 const searchNBAOdds = async () => {
-  const response = await funcs.getOddsBySport('basketball_nba', 'us', 'american', 'h2h,totals');
+  const response = await funcs.getOddsBySport('basketball_nba', 'us', 'american', 'h2h,totals,spreads');
   setoddsResults(response);
   console.log(response);
 };
