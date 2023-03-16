@@ -30,7 +30,7 @@ const userSchema = new Schema({
 
   description: {
     type: String,
-    default: 'No description',
+    default: 'I love my wife!',
   },
 
   bets: [

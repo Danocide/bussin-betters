@@ -7,6 +7,7 @@ const typeDefs = gql`
     email: String!
     password: String!
     accountBalance: Int!
+    description: String!
     bets: [Bets!]!
     transaction: [Transaction!]!
     payment: [Payment!]!
