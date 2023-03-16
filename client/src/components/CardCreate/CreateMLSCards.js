@@ -1,47 +1,39 @@
 import React from "react";
+import ModalCreate from "../Modal.js";
 
 // In our return method, we use the map method to return a new array of `li` and `img` elements that are specific to each search result
 function CreateMLSCards(props) {
   return (
     <div className="row">
       {props.results.map((item) => (
-        <div key = {item.id} className="col-xxl-12" style={{marginLeft: '-10px'}}>
-          <div className="card d-flex flex-row align-items-center" style={{height: '57px', width: '1352px'}}>
-            <div className="card-body" style={{fontSize: '16px'}}>
-              <p>{item.home_team}</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{fontSize: '16px', marginLeft: '-84px'}}>
-              <p>v</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{marginLeft: '-79px'}}>
-              <p>{item.away_team}</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{marginLeft: '20px'}}>
-              <p>Home:</p>
-            </div>
-            <div className="card-body d-flex flex-row">
-              <p>{item.bookmakers[0].markets[0].outcomes[0].price}</p>
-            </div>
-            <div className="card-body d-flex flex-row">
-              <p>Away:</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{fontSize: '16px'}}>
-              <p>{item.bookmakers[0].markets[0].outcomes[1].price}</p>
-            </div>
-            <div className="card-body d-flex flex-row">
-              <p>Draw:</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{fontSize: '16px'}}>
-              <p>{item.bookmakers[0].markets[0].outcomes[2].price}</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{fontSize: '16px', marginLeft: '0px'}}>
-              <p>Over: {item.bookmakers[9].markets[1].outcomes[0].point}/ {item.bookmakers[9].markets[1].outcomes[0].price}</p>
-            </div>
-            <div className="card-body d-flex flex-row" style={{fontSize: '16px'}}>
-              <p>Under: {item.bookmakers[9].markets[1].outcomes[1].point}/ {item.bookmakers[9].markets[1].outcomes[1].price}</p>
-            </div><button className="btn btn-primary" type="button" style={{height: '45px'}}>Bet Now!</button>
-          </div>
+      <div key={item.id} className="col-xxl-12" style={{ padding: '0', margin: '0' }}>
+      <div className="card d-flex flex-row align-items-center" style={{ height: '57px', width: '100%', background: 'var(--bs-body-color)', borderRadius: '0', border: 'none', margin: '4px', color: 'rgba(255,255,255,0.7)', paddingTop:'15px', display: 'grid', gridTemplateColumns: '1fr auto 1fr auto auto auto auto' }}>
+          <p style = {{textAlign: 'center', fontWeight: 'bold', width: '300px'}}>{item.away_team}</p>
+          <p style={{textAlign:'center'}}>@</p>
+          <p style = {{textAlign: 'center', fontWeight: 'bold', width: '300px', marginRight: '50px'}}>{item.home_team}</p> 
+        <div className=" flex-row" style={{ fontSize: '16px', textAlign: 'left'}}>
+          <p style= {{width: '200px', color: item.bookmakers[0].markets[0].outcomes[0].price < 0 ? 'green' : 'white', fontWeight: 'bold'}}>Home: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {item.bookmakers[0].markets[0].outcomes[0].price}</p>
         </div>
+        <div className="card-body flex-row" style={{ fontSize: '16px', textAlign: 'left'}}>
+          <p style= {{width: '200px', color: item.bookmakers[0].markets[0].outcomes[1].price < 0 ? 'green' : 'white', fontWeight: 'bold'}}>Away: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {item.bookmakers[0].markets[0].outcomes[1].price}</p>
+        </div>
+        <div className="card-body d-flex flex-row">
+            <p style= {{width: '200px', fontWeight: 'bold'}}>Draw: {item.bookmakers[0].markets[0].outcomes[2].price}</p>
+       </div>
+        <div className="card-body d-flex flex-row" style={{ fontSize: '16px' }}>
+          <p>Over/Under:{item.bookmakers[0]?.markets[2]?.outcomes[0]?.point || '-'} / {item.bookmakers[0]?.markets[2]?.outcomes[0]?.price || '-'}</p>
+        </div>
+        <ModalCreate home_team={item.home_team}
+                      away_team= {item.away_team}
+                      home_odds= {item.bookmakers[0].markets[0].outcomes[0].price}
+                      away_odds= {item.bookmakers[0].markets[0].outcomes[1].price}
+                      // dog_odds= {item.bookmakers[0].markets[1].outcomes[0].point}
+                      // dog_name= {item.bookmakers[0].markets[1].outcomes[0].name}
+                      // fav_odds= {item.bookmakers[0].markets[1].outcomes[1].point}
+                      // fav_name= {item.bookmakers[0].markets[1].outcomes[1].name}
+                      />
+      </div>
+    </div>
       ))}
     </div>
   );

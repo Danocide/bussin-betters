@@ -1,6 +1,5 @@
 const API_URL = 'https://odds.p.rapidapi.com/v4/sports';
-var keyArr = ['2ca9e05eb2mshaad55f69b7a7e24p152fdajsn1f4c0544ad64',
-  'c1a48b6beemsh933a4cb8cf03335p126b55jsnd037988b766f', '92892adfc3msh6c3519920a0dd57p1c0fcbjsn891d97cf349d', 'eaaa813926msh7bc3448e9439517p1e2fffjsn1e58d3a059e7']
+var keyArr = ['6c1819b5d5msh224df4793f36756p19b1cfjsnef2c211706bb', 'fedebbc7demsh1c790ae5a713c61p1837b1jsnc32cc7e8f148', '6b55b80c68mshdbfe1a445d77d04p165c27jsncdca01d6fff9']
 
 	export async function getSports() {
 		const response = await fetch(API_URL, {

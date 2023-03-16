@@ -23,7 +23,7 @@ const GetXFLOdds = () => {
 
 const [oddsResults, setoddsResults] = useState([]);
 const searchXFLOdds = async () => {
-  const response = await funcs.getOddsBySport('americanfootball_xfl', 'us', 'american', 'h2h,totals');
+  const response = await funcs.getOddsBySport('americanfootball_xfl', 'us', 'american', 'h2h,totals,spreads');
   setoddsResults(response);
   console.log(response);
 };
