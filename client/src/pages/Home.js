@@ -50,7 +50,7 @@ export default class App extends React.Component {
                   <h2 className="accordion-header" role="tab"><button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-2" aria-expanded="false" aria-controls="accordion-1 .item-2">NBA</button></h2>
                   <div className="accordion-collapse collapse item-2" role="tabpanel" data-bs-parent="#accordion-1">
                     <div className="accordion-body">
-                      {/* <GetNBAOdds/> */}
+                      {<GetNBAOdds/>}
                       <div className="row" />
                       <div className="row" />
                       <div className="row" />
