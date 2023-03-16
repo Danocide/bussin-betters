@@ -60,7 +60,7 @@ type Auth {
   }
 
     type Mutation {
-    addUser(username: String!, email: String!, password: String!, accountBalance: Int!): Auth
+    addUser(username: String!, email: String!, password: String!, accountBalance: Int!, description: String!): Auth
     login(email: String!, password: String!): Auth
     logout: Auth
     updateUser(id: ID!, username: String!, email: String! password: String!, accountBalance: Int!): User
