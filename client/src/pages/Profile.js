@@ -64,17 +64,20 @@ const Profile = () => {
               className="col d-flex justify-content-around"
               style={{ paddingTop: "25px", width: "238px", opacity: "0.44" }}
             >
-              <i
+              <a
                 className="icon ion-social-facebook-outline"
                 style={{ fontSize: "55px" }}
+                href="https://www.facebook.com/"
               />
-              <i
+              <a
                 className="icon ion-social-instagram-outline"
                 style={{ fontSize: "55px" }}
+                href="https://www.instagram.com/"
               />
-              <i
+              <a
                 className="icon ion-social-twitter-outline"
                 style={{ fontSize: "55px" }}
+                href="https://www.twitter.com/"
               />
             </div>
           </div>

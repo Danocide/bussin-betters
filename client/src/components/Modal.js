@@ -27,7 +27,7 @@ function ModalCreate(props) {
       </div>
         </Modal.Body>
         <Modal.Footer>
-        <input type="text" style={{marginRight: '50px', marginTop: '4px'}} />
+        <input type="text" placeholder="Amount..." style={{marginRight: '50px', marginTop: '4px'}} />
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>

@@ -54,7 +54,7 @@ const Navbar = () => {
             <Link className="nav-link active" to="/">Home</Link>
             </li>
             <li className="nav-item" style={{marginRight: '0px', paddingRight: '0px'}}>
-              <a className="nav-link" href="pricing.html" style={{paddingRight: '20px'}}>Leaderboards</a>
+              <a className="nav-link" href="#leaderboard" style={{paddingRight: '20px'}}>Leaderboards</a>
             </li>
             <li className="nav-item">
             <Link className="nav-link" to="/profile">Profile</Link>

@@ -1,9 +1,9 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 import GetMLBOdds from '../components/SportsOdds/MLBOdds';
 import GetNBAOdds from '../components/SportsOdds/NBAOdds';
 import GetXFLOdds from '../components/SportsOdds/XFLOdds';
 import GetMLSOdds from '../components/SportsOdds/MLSOdds';
-
 
 
 export default class App extends React.Component {
@@ -14,11 +14,13 @@ export default class App extends React.Component {
           <section className="clean-block clean-hero" style={{color: 'rgba(28,28,28,0.85)', background: 'url("assets/img/12nfl-sked-spencer-videoSixteenByNine3000.jpg") center / cover, url("assets/img/13nfl-matchups-kc-videoSixteenByNine3000.jpg"), url("assets/img/16407114115545.jpg")', height: '1100px'}}>
             <div className="text">
               <h2>Welcome to Bhet Stone</h2>
-              <p>This is your wife's favorite sports betting website. No credit cards. Just bragging rights and a chance to sharpen your betting skills.</p><button className="btn btn-outline-light btn-lg" type="button" data-bs-target="SportsNav">BET NOW</button>
+              <p>This is your wife's favorite sports betting website. No credit cards. Just bragging rights and a chance to sharpen your betting skills.</p>
+              {/* <button className="btn btn-outline-light btn-lg" type="button" data-bs-target="SportsNav">BET NOW</button> */}
             </div>
           </section>
           <section className="clean-block clean-info dark">
-            <nav className="navbar navbar-light navbar-expand-md" id="SportsNav" style={{background: 'var(--bs-body-color)'}}>
+            <div id="sports">
+            <nav className="navbar navbar-light navbar-expand-md" style={{background: 'var(--bs-body-color)'}}>
               <div className="container-fluid"><button data-bs-toggle="collapse" className="navbar-toggler" data-bs-target="#navcol-2"><span className="visually-hidden">Toggle navigation</span><span className="navbar-toggler-icon" /></button>
                 <div className="collapse navbar-collapse justify-content-center" id="navcol-2" style={{paddingLeft: '0px', marginLeft: '0px', color: 'rgb(255,255,255)'}}>
                   <ul className="navbar-nav">
@@ -31,6 +33,7 @@ export default class App extends React.Component {
                 </div>
               </div>
             </nav>
+            </div>
             <div className="col">
               <div className="accordion" role="tablist" id="accordion-1">
                 <div className="accordion-item">
@@ -81,7 +84,8 @@ export default class App extends React.Component {
                   </div>
                 </div>
               </div>
-        <div>
+              {/* LEADERBOARD */}
+        <div id="leaderboard">
         <h1 style={{textAlign: 'center', marginTop: '25px'}}>Leaderboards</h1>
         <div className="container" style={{marginTop: '25px', background: 'var(--bs-body-color)', borderRadius: '11px', border: '25px solid var(--bs-body-color)', borderTopStyle: 'solid', borderRight: '15px solid var(--bs-body-color)', borderBottomStyle: 'solid', borderLeft: '15px solid var(--bs-body-color)'}}>
           <div className="row">
@@ -89,27 +93,27 @@ export default class App extends React.Component {
               <div className="card">
                 <div className="card-body" style={{height: '550px'}}>
                   <h4 className="card-title" style={{textAlign: 'center'}}>Weekly</h4>
-                  <div className="row d-flex flex-column" style={{marginBottom: '9px', borderRadius: '5px', borderBottom: '3px solid rgb(130,130,130)'}}>
-                    <button className="col d-flex flex-row align-items-center align-content-center align-self-center" href="#" style={{marginBottom: '0px', border: 'none'}}>
-                      <picture><img className="rounded-circle" src="assets/img/scenery/image6.jpg" style={{width: '65px', height: '65px'}} /></picture>
+                  <div className="row d-flex flex-column" style={{marginBottom: '9px', borderRadius: '5px', borderBottom: '3px solid rgb(130,130,130)', background: 'var(--bs-gray-500)'}}>
+                    <a className="col d-flex flex-row align-items-center align-content-center align-self-center" id="proflink" href="/profile" style={{marginBottom: '0px', border: 'none', textdecoration: 'none'}}>
+                      <picture><img className="rounded-circle" src="assets/img/13nfl-matchups-kc-videoSixteenByNine3000.jpg" style={{width: '65px', height: '65px'}} /></picture>
                       <div style={{marginLeft: '10px'}}>
-                        <p style={{marginBottom: '0px', fontSize: '20px'}}>Username</p>
-                        <p className="fw-bold" style={{marginBottom: '0px', marginRight: '0px', fontSize: '10px', marginLeft: '2px'}}>324.32</p>
+                        <p style={{marginBottom: '0px', fontSize: '20px'}}>Your Profile</p>
+                        <p className="fw-bold" style={{marginBottom: '0px', marginRight: '0px', fontSize: '10px', marginLeft: '2px'}}>100.00</p>
                       </div>
                       <div className="d-flex flex-row">
                         <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '35px', marginTop: '25px'}}>
                           <p className="fw-semibold" style={{marginBottom: '0px', color: 'var(--bs-gray-600)', fontSize: '12px'}}>Wins:</p>
-                          <p>36</p>
+                          <p>3</p>
                         </div>
                         <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '30px', marginTop: '25px'}}>
                           <p className="fw-semibold" style={{marginBottom: '0px', fontSize: '12px', color: 'var(--bs-gray-600)'}}>Losses:</p>
-                          <p>21</p>
+                          <p>2</p>
                         </div>
                       </div>
-                    </button>
+                    </a>
                   </div>
                   <div className="row d-flex flex-column" style={{marginBottom: '9px', borderRadius: '5px', borderBottom: '3px solid rgb(130,130,130)'}}>
-                    <button className="col d-flex flex-row align-items-center align-content-center align-self-center" href="#" style={{marginBottom: '0px', border: 'none'}}>
+                  <a className="col d-flex flex-row align-items-center align-content-center align-self-center" id="proflink" href="/profile" style={{marginBottom: '0px', border: 'none', textdecoration: 'none'}}>
                       <picture><img className="rounded-circle" src="assets/img/scenery/image6.jpg" style={{width: '65px', height: '65px'}} /></picture>
                       <div style={{marginLeft: '10px'}}>
                         <p style={{marginBottom: '0px', fontSize: '20px'}}>Username</p>
@@ -118,17 +122,17 @@ export default class App extends React.Component {
                       <div className="d-flex flex-row">
                         <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '35px', marginTop: '25px'}}>
                           <p className="fw-semibold" style={{marginBottom: '0px', color: 'var(--bs-gray-600)', fontSize: '12px'}}>Wins:</p>
-                          <p>36</p>
+                          <p>3</p>
                         </div>
                         <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '30px', marginTop: '25px'}}>
                           <p className="fw-semibold" style={{marginBottom: '0px', fontSize: '12px', color: 'var(--bs-gray-600)'}}>Losses:</p>
-                          <p>21</p>
+                          <p>2</p>
                         </div>
                       </div>
-                    </button>
+                    </a>
                   </div>
                   <div className="row d-flex flex-column" style={{marginBottom: '9px', borderRadius: '5px', borderBottom: '3px solid rgb(130,130,130)'}}>
-                    <button className="col d-flex flex-row align-items-center align-content-center align-self-center" href="#" style={{marginBottom: '0px', border: 'none'}}>
+                  <a className="col d-flex flex-row align-items-center align-content-center align-self-center" id="proflink" href="/profile" style={{marginBottom: '0px', border: 'none', textdecoration: 'none'}}>
                       <picture><img className="rounded-circle" src="assets/img/scenery/image6.jpg" style={{width: '65px', height: '65px'}} /></picture>
                       <div style={{marginLeft: '10px'}}>
                         <p style={{marginBottom: '0px', fontSize: '20px'}}>Username</p>
@@ -137,17 +141,17 @@ export default class App extends React.Component {
                       <div className="d-flex flex-row">
                         <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '35px', marginTop: '25px'}}>
                           <p className="fw-semibold" style={{marginBottom: '0px', color: 'var(--bs-gray-600)', fontSize: '12px'}}>Wins:</p>
-                          <p>36</p>
+                          <p>3</p>
                         </div>
                         <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '30px', marginTop: '25px'}}>
                           <p className="fw-semibold" style={{marginBottom: '0px', fontSize: '12px', color: 'var(--bs-gray-600)'}}>Losses:</p>
-                          <p>21</p>
+                          <p>2</p>
                         </div>
                       </div>
-                    </button>
+                    </a>
                   </div>
                   <div className="row d-flex flex-column" style={{marginBottom: '9px', borderRadius: '5px', borderBottom: '3px solid rgb(130,130,130)'}}>
-                    <div className="col d-flex flex-row align-items-center align-content-center align-self-center" style={{marginBottom: '0px'}}>
+                  <a className="col d-flex flex-row align-items-center align-content-center align-self-center" id="proflink" href="/profile" style={{marginBottom: '0px', border: 'none', textdecoration: 'none'}}>
                       <picture><img className="rounded-circle" src="assets/img/scenery/image6.jpg" style={{width: '65px', height: '65px'}} /></picture>
                       <div style={{marginLeft: '10px'}}>
                         <p style={{marginBottom: '0px', fontSize: '20px'}}>Username</p>
@@ -156,17 +160,17 @@ export default class App extends React.Component {
                       <div className="d-flex flex-row">
                         <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '35px', marginTop: '25px'}}>
                           <p className="fw-semibold" style={{marginBottom: '0px', color: 'var(--bs-gray-600)', fontSize: '12px'}}>Wins:</p>
-                          <p>36</p>
+                          <p>3</p>
                         </div>
                         <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '30px', marginTop: '25px'}}>
                           <p className="fw-semibold" style={{marginBottom: '0px', fontSize: '12px', color: 'var(--bs-gray-600)'}}>Losses:</p>
-                          <p>21</p>
+                          <p>2</p>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                   <div className="row d-flex flex-column" style={{marginBottom: '9px', borderRadius: '5px', borderBottom: '3px solid rgb(130,130,130)'}}>
-                    <div className="col d-flex flex-row align-items-center align-content-center align-self-center" style={{marginBottom: '0px'}}>
+                  <a className="col d-flex flex-row align-items-center align-content-center align-self-center" id="proflink" href="/profile" style={{marginBottom: '0px', border: 'none', textdecoration: 'none'}}>
                       <picture><img className="rounded-circle" src="assets/img/scenery/image6.jpg" style={{width: '65px', height: '65px'}} /></picture>
                       <div style={{marginLeft: '10px'}}>
                         <p style={{marginBottom: '0px', fontSize: '20px'}}>Username</p>
@@ -175,14 +179,14 @@ export default class App extends React.Component {
                       <div className="d-flex flex-row">
                         <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '35px', marginTop: '25px'}}>
                           <p className="fw-semibold" style={{marginBottom: '0px', color: 'var(--bs-gray-600)', fontSize: '12px'}}>Wins:</p>
-                          <p>36</p>
+                          <p>3</p>
                         </div>
                         <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '30px', marginTop: '25px'}}>
                           <p className="fw-semibold" style={{marginBottom: '0px', fontSize: '12px', color: 'var(--bs-gray-600)'}}>Losses:</p>
-                          <p>21</p>
+                          <p>2</p>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -191,8 +195,27 @@ export default class App extends React.Component {
               <div className="card">
                 <div className="card-body" style={{height: '550px'}}>
                   <h4 className="card-title" style={{textAlign: 'center'}}>Monthly</h4>
-                  <div className="row d-flex flex-column" style={{marginBottom: '9px', borderRadius: '5px', borderBottom: '3px solid rgb(130,130,130)'}}>
-                    <div className="col d-flex flex-row align-items-center align-content-center align-self-center" style={{marginBottom: '0px'}}>
+                  <div className="row d-flex flex-column" style={{marginBottom: '9px', borderRadius: '5px', borderBottom: '3px solid rgb(130,130,130)', background: 'var(--bs-gray-500)'}}>
+                  <a className="col d-flex flex-row align-items-center align-content-center align-self-center" id="proflink" href="/profile" style={{marginBottom: '0px', border: 'none', textdecoration: 'none'}}>
+                      <picture><img className="rounded-circle" src="assets/img/13nfl-matchups-kc-videoSixteenByNine3000.jpg" style={{width: '65px', height: '65px'}} /></picture>
+                      <div style={{marginLeft: '10px'}}>
+                        <p style={{marginBottom: '0px', fontSize: '20px'}}>Your Profile</p>
+                        <p className="fw-bold" style={{marginBottom: '0px', marginRight: '0px', fontSize: '10px', marginLeft: '2px'}}>100.00</p>
+                      </div>
+                      <div className="d-flex flex-row">
+                        <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '35px', marginTop: '25px'}}>
+                          <p className="fw-semibold" style={{marginBottom: '0px', color: 'var(--bs-gray-600)', fontSize: '12px'}}>Wins:</p>
+                          <p>3</p>
+                        </div>
+                        <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '30px', marginTop: '25px'}}>
+                          <p className="fw-semibold" style={{marginBottom: '0px', fontSize: '12px', color: 'var(--bs-gray-600)'}}>Losses:</p>
+                          <p>2</p>
+                        </div>
+                      </div>
+                    </a>
+                    </div>
+                    <div className="row d-flex flex-column" style={{marginBottom: '9px', borderRadius: '5px', borderBottom: '3px solid rgb(130,130,130)'}}>
+                    <a className="col d-flex flex-row align-items-center align-content-center align-self-center" id="proflink" href="/profile" style={{marginBottom: '0px', border: 'none', textdecoration: 'none'}}>
                       <picture><img className="rounded-circle" src="assets/img/scenery/image6.jpg" style={{width: '65px', height: '65px'}} /></picture>
                       <div style={{marginLeft: '10px'}}>
                         <p style={{marginBottom: '0px', fontSize: '20px'}}>Username</p>
@@ -201,15 +224,17 @@ export default class App extends React.Component {
                       <div className="d-flex flex-row">
                         <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '35px', marginTop: '25px'}}>
                           <p className="fw-semibold" style={{marginBottom: '0px', color: 'var(--bs-gray-600)', fontSize: '12px'}}>Wins:</p>
-                          <p>36</p>
+                          <p>3</p>
                         </div>
                         <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '30px', marginTop: '25px'}}>
                           <p className="fw-semibold" style={{marginBottom: '0px', fontSize: '12px', color: 'var(--bs-gray-600)'}}>Losses:</p>
-                          <p>21</p>
+                          <p>2</p>
                         </div>
                       </div>
+                    </a>
                     </div>
-                    <div className="col d-flex flex-row align-items-center align-content-center align-self-center" style={{marginBottom: '0px'}}>
+                    <div className="row d-flex flex-column" style={{marginBottom: '9px', borderRadius: '5px', borderBottom: '3px solid rgb(130,130,130)'}}>
+                    <a className="col d-flex flex-row align-items-center align-content-center align-self-center" id="proflink" href="/profile" style={{marginBottom: '0px', border: 'none', textdecoration: 'none'}}>
                       <picture><img className="rounded-circle" src="assets/img/scenery/image6.jpg" style={{width: '65px', height: '65px'}} /></picture>
                       <div style={{marginLeft: '10px'}}>
                         <p style={{marginBottom: '0px', fontSize: '20px'}}>Username</p>
@@ -218,15 +243,17 @@ export default class App extends React.Component {
                       <div className="d-flex flex-row">
                         <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '35px', marginTop: '25px'}}>
                           <p className="fw-semibold" style={{marginBottom: '0px', color: 'var(--bs-gray-600)', fontSize: '12px'}}>Wins:</p>
-                          <p>36</p>
+                          <p>3</p>
                         </div>
                         <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '30px', marginTop: '25px'}}>
                           <p className="fw-semibold" style={{marginBottom: '0px', fontSize: '12px', color: 'var(--bs-gray-600)'}}>Losses:</p>
-                          <p>21</p>
+                          <p>4</p>
                         </div>
                       </div>
+                    </a>
                     </div>
-                    <div className="col d-flex flex-row align-items-center align-content-center align-self-center" style={{marginBottom: '0px'}}>
+                    <div className="row d-flex flex-column" style={{marginBottom: '9px', borderRadius: '5px', borderBottom: '3px solid rgb(130,130,130)'}}>
+                    <a className="col d-flex flex-row align-items-center align-content-center align-self-center" id="proflink" href="/profile" style={{marginBottom: '0px', border: 'none', textdecoration: 'none'}}>
                       <picture><img className="rounded-circle" src="assets/img/scenery/image6.jpg" style={{width: '65px', height: '65px'}} /></picture>
                       <div style={{marginLeft: '10px'}}>
                         <p style={{marginBottom: '0px', fontSize: '20px'}}>Username</p>
@@ -235,32 +262,15 @@ export default class App extends React.Component {
                       <div className="d-flex flex-row">
                         <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '35px', marginTop: '25px'}}>
                           <p className="fw-semibold" style={{marginBottom: '0px', color: 'var(--bs-gray-600)', fontSize: '12px'}}>Wins:</p>
-                          <p>36</p>
+                          <p>6</p>
                         </div>
                         <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '30px', marginTop: '25px'}}>
                           <p className="fw-semibold" style={{marginBottom: '0px', fontSize: '12px', color: 'var(--bs-gray-600)'}}>Losses:</p>
-                          <p>21</p>
+                          <p>2</p>
                         </div>
                       </div>
+                    </a>
                     </div>
-                    <div className="col d-flex flex-row align-items-center align-content-center align-self-center" style={{marginBottom: '0px'}}>
-                      <picture><img className="rounded-circle" src="assets/img/scenery/image6.jpg" style={{width: '65px', height: '65px'}} /></picture>
-                      <div style={{marginLeft: '10px'}}>
-                        <p style={{marginBottom: '0px', fontSize: '20px'}}>Username</p>
-                        <p className="fw-bold" style={{marginBottom: '0px', marginRight: '0px', fontSize: '10px', marginLeft: '2px'}}>324.32</p>
-                      </div>
-                      <div className="d-flex flex-row">
-                        <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '35px', marginTop: '25px'}}>
-                          <p className="fw-semibold" style={{marginBottom: '0px', color: 'var(--bs-gray-600)', fontSize: '12px'}}>Wins:</p>
-                          <p>36</p>
-                        </div>
-                        <div className="d-flex flex-column align-items-center" style={{width: '165px', marginLeft: '30px', marginTop: '25px'}}>
-                          <p className="fw-semibold" style={{marginBottom: '0px', fontSize: '12px', color: 'var(--bs-gray-600)'}}>Losses:</p>
-                          <p>21</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
