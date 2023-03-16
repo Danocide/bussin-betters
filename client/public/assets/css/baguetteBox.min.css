@@ -90,6 +90,11 @@
   animation: bounceFromLeft .4s ease-out;
 }
 
+#proflink {
+  text-decoration: none;
+  color: #000;
+}
+
 @keyframes bounceFromRight {
   0%, 100% {
     margin-left: 0;
