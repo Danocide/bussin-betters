@@ -9,17 +9,17 @@ import CreateCards from "../CardCreate/CreateAllCards";
 const GetNBAScores = () => {
 
 
-// const [NBAresults, setNBAResults] = useState([]);
-// const searchNBAScores = async () => {
-//   const response = await funcs.scoresBySport('basketball_nba');
-//   setNBAResults(response);
-//   console.log(response);
-// };
+const [NBAresults, setNBAResults] = useState([]);
+const searchNBAScores = async () => {
+  const response = await funcs.scoresBySport('basketball_nba');
+  setNBAResults(response);
+  console.log(response);
+};
 
 
-// useEffect(() => {
-//   searchNBAScores();
-// }, []);
+useEffect(() => {
+  searchNBAScores();
+}, []);
 
 const [oddsResults, setoddsResults] = useState([]);
 const searchNBAOdds = async () => {
