@@ -7,6 +7,7 @@ export const QUERY_USER = gql`
       username
       email
       accountBalance
+      description
     }
   }
 `;
@@ -18,6 +19,7 @@ export const QUERY_ME = gql`
       username
       email
       accountBalance
+      description
     }
   }
 `;
