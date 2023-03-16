@@ -23,10 +23,11 @@ function CreateCards(props) {
                       away_team= {item.away_team}
                       home_odds= {item.bookmakers[0].markets[0].outcomes[0].price}
                       away_odds= {item.bookmakers[0].markets[0].outcomes[1].price}
-                      dog_odds= {item.bookmakers[0].markets[1].outcomes[0].point}
-                      dog_name= {item.bookmakers[0].markets[1].outcomes[0].name}
-                      fav_odds= {item.bookmakers[0].markets[1].outcomes[1].point}
-                      fav_name= {item.bookmakers[0].markets[1].outcomes[1].name}/>
+                      // dog_odds= {item.bookmakers[0].markets[1].outcomes[0].point}
+                      // dog_name= {item.bookmakers[0].markets[1].outcomes[0].name}
+                      // fav_odds= {item.bookmakers[0].markets[1].outcomes[1].point}
+                      // fav_name= {item.bookmakers[0].markets[1].outcomes[1].name}
+                      />
       </div>
     </div>
       ))}
