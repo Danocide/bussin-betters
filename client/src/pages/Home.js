@@ -23,7 +23,7 @@ export default class App extends React.Component {
                 <div className="collapse navbar-collapse justify-content-center" id="navcol-2" style={{paddingLeft: '0px', marginLeft: '0px', color: 'rgb(255,255,255)'}}>
                   <ul className="navbar-nav">
                     <li className="nav-item"><a className="nav-link active" href="#" style={{color: 'rgba(255,255,255,0.55)'}}>ALL SPORTS</a></li>
-                    <li className="nav-item"><a className="nav-link" href="#" style={{color: 'rgba(255,255,255,0.55)'}}>NFL</a></li>
+                    <li className="nav-item"><a className="nav-link" href="#" style={{color: 'rgba(255,255,255,0.55)'}}>XFL</a></li>
                     <li className="nav-item"><a className="nav-link" href="#" style={{color: 'rgba(255,255,255,0.55)'}}>NBA</a></li>
                     <li className="nav-item"><a className="nav-link" href="#" style={{color: 'rgba(255,255,255,0.55)'}}>MLB</a></li>
                     <li className="nav-item"><a className="nav-link" href="#" style={{color: 'rgba(255,255,255,0.55)'}}>SOCCER</a></li>
@@ -284,7 +284,7 @@ export default class App extends React.Component {
                   <div className="card text-center clean-card"><img className="card-img-top w-100 d-block" src="assets/img/avatars/avatar2.jpg" />
                     <div className="card-body info">
                       <h4 className="card-title">Robert Downturn</h4>
-                      <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                      <p className="card-text">After I lost my job due to a Corona problem I needed money, bad! After I found Bhet Stone I was so relieved that I could enjoy both my addictiona at the same time! Now to grab another corona!</p>
                       <div className="icons"><a href="#"><i className="icon-social-facebook" /></a><a href="#"><i className="icon-social-instagram" /></a><a href="#"><i className="icon-social-twitter" /></a></div>
                     </div>
                   </div>
@@ -293,7 +293,7 @@ export default class App extends React.Component {
                   <div className="card text-center clean-card"><img className="card-img-top w-100 d-block" src="assets/img/avatars/avatar3.jpg" />
                     <div className="card-body info">
                       <h4 className="card-title">Ally Sanders</h4>
-                      <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                      <p className="card-text">I let my husband use this site so he doesn't lose our house again. I'm asking for a divorce next time.</p>
                       <div className="icons"><a href="#"><i className="icon-social-facebook" /></a><a href="#"><i className="icon-social-instagram" /></a><a href="#"><i className="icon-social-twitter" /></a></div>
                     </div>
                   </div>
